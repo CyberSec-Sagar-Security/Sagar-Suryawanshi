@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sagar B. Suryawanshi — Cybersecurity | Cloud Security · Application Security · DevSecOps | CompTIA Security+ Certified | AWS, Azure" />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Security Headers (meta fallback — see security-headers.md for server-level config) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self';" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="Referrer-Policy" content="no-referrer" />
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
+
+  <title>Sagar B. Suryawanshi — Cybersecurity</title>
+
+  <!-- Google Fonts with SRI -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+    crossorigin="anonymous"
+  />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Theme init: sync load prevents flash of wrong theme -->
+  <script src="assets/js/theme-init.js"></script>
+</head>
+<body>
+
+
+  <!-- Navigation -->
+  <nav id="navbar" role="navigation" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Sagar Suryawanshi home">Sagar</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="theme-toggle" aria-label="Switch to dark mode">
+          <span class="theme-icon theme-icon-moon">🌙</span>
+          <span class="theme-icon theme-icon-sun">☀️</span>
+        </button></li>
+        <li><button id="nav-cv-btn" class="btn btn-accent btn-sm" aria-label="Download CV">Download CV</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ═══════════════════════════════════════════
+         HERO SECTION
+    ═══════════════════════════════════════════ -->
+    <section id="hero" aria-labelledby="hero-heading">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>Available for Opportunities · Ireland</span>
+          </div>
+          <h1 id="hero-heading">
+            Sagar B.<br />
+            <span class="hero-name-accent">Suryawanshi</span>
+          </h1>
+          <p class="hero-title">Cybersecurity — Cloud · AppSec · DevSecOps</p>
+          <p class="hero-focus">Cloud Security &nbsp;·&nbsp; Application Security &nbsp;·&nbsp; DevSecOps</p>
+          <p class="hero-subtitle">CompTIA Security+ (SY0-701) &nbsp;·&nbsp; Google Cybersecurity &nbsp;·&nbsp; CISCO SOC &nbsp;·&nbsp; LetsDefend</p>
+          <p class="hero-tagline">
+            Building security tools across Cloud, AppSec, and DevSecOps — backed by CompTIA Security+, published research, and professional engagements with Mastercard, PwC Switzerland, and Tata Group.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <button id="hero-cv-btn" class="btn btn-outline" aria-label="Download CV">Download CV</button>
+          </div>
+          <div class="hero-trust">
+            <div class="trust-item">
+              <span class="trust-number">4+</span>
+              <span class="trust-label">Certifications</span>
+            </div>
+            <div class="trust-divider"></div>
+            <div class="trust-item">
+              <span class="trust-number">6</span>
+              <span class="trust-label">Security Projects</span>
+            </div>
+            <div class="trust-divider"></div>
+            <div class="trust-item">
+              <span class="trust-number">1</span>
+              <span class="trust-label">Published Paper</span>
+            </div>
+            <div class="trust-divider"></div>
+            <div class="trust-item">
+              <span class="trust-number">3</span>
+              <span class="trust-label">Professional Engagements</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-photo-wrapper">
+          <div class="hero-photo-ring">
+            <img id="hero-photo" alt="Sagar B. Suryawanshi — Cybersecurity" class="hero-photo" />
+          </div>
+          <div class="hero-photo-badge">
+            <span class="photo-badge-icon">🛡️</span>
+            <span>Security+</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span>scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         ABOUT SECTION
+    ═══════════════════════════════════════════ -->
+    <section id="about" aria-labelledby="about-heading">
+      <div class="section-inner">
+        <div class="section-label">01 / About</div>
+        <h2 id="about-heading">Who I Am</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I'm a final-year B.Sc. IT student who doesn't wait for a job to start doing the work. I've built real security tools — a cloud misconfiguration scanner tested against live AWS environments, an AES-256 encrypted file platform with full RBAC — and taken them from idea to documented GitHub repository.
+            </p>
+            <p>
+              My security thinking spans Cloud, AppSec, and DevSecOps, backed by <strong>CompTIA Security+ (SY0-701)</strong> and hands-on engagements modelled on real Tier-1 analyst workflows at <strong>Mastercard</strong>, <strong>PwC Switzerland</strong>, and <strong>Tata Group</strong>. I also published research on offensive and defensive security strategy at an international conference in 2024.
+            </p>
+            <p>
+              I'm heading to Ireland for an MSc in Cybersecurity — and I'm actively looking for roles where I can contribute from week one, not after a six-month ramp-up.
+            </p>
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <span class="highlight-icon">🎓</span>
+                <div>
+                  <strong>B.Sc. Information Technology</strong>
+                  <span>KES Shroff College, Mumbai · Graduating May 2026</span>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">📍</span>
+                <div>
+                  <strong>Location</strong>
+                  <span>Mumbai, India · Open to relocation in Ireland</span>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">📄</span>
+                <div>
+                  <strong>Published Research</strong>
+                  <span>International Conference · ISBN: 978-93-342-8167-5</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="stat-icon">☁️</span>
+              <strong>Cloud Security</strong>
+              <span>AWS · Azure · GCP</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-icon">🔐</span>
+              <strong>Application Security</strong>
+              <span>OWASP · Burp Suite · AppSec</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-icon">⚙️</span>
+              <strong>DevSecOps</strong>
+              <span>Docker · CI/CD · IaC Security</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-icon">🛡️</span>
+              <strong>CompTIA Security+</strong>
+              <span>SY0-701 Certified</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SKILLS SECTION
+    ═══════════════════════════════════════════ -->
+    <section id="skills" aria-labelledby="skills-heading">
+      <div class="section-inner">
+        <div class="section-label">02 / Skills</div>
+        <h2 id="skills-heading">Technical Expertise</h2>
+        <p class="section-subtext">Hands-on skills across cloud security, application security, and DevSecOps — built through projects, labs, and client engagements.</p>
+
+        <div class="skills-tabs">
+          <div class="tab-nav" role="tablist" aria-label="Skill categories">
+            <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-cloud" id="tabid-cloud">
+              <span class="tab-icon">☁️</span> Cloud Security
+            </button>
+            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-appsec" id="tabid-appsec">
+              <span class="tab-icon">🔐</span> AppSec
+            </button>
+            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-devsec" id="tabid-devsec">
+              <span class="tab-icon">⚙️</span> DevSecOps
+            </button>
+            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-tools" id="tabid-tools">
+              <span class="tab-icon">🛠️</span> Tools &amp; Languages
+            </button>
+          </div>
+
+          <div class="tab-panel active" id="tab-cloud" role="tabpanel" aria-labelledby="tabid-cloud">
+            <div class="skills-pills-grid">
+              <div class="skills-pills-col">
+                <h4 class="pills-group-label">AWS</h4>
+                <div class="skill-pills">
+                  <span class="skill-pill">IAM &amp; Policies</span>
+                  <span class="skill-pill">GuardDuty</span>
+                  <span class="skill-pill">Security Hub</span>
+                  <span class="skill-pill">CloudTrail</span>
+                  <span class="skill-pill">S3 Bucket Policies</span>
+                </div>
+              </div>
+              <div class="skills-pills-col">
+                <h4 class="pills-group-label">Azure</h4>
+                <div class="skill-pills">
+                  <span class="skill-pill">Defender for Cloud</span>
+                  <span class="skill-pill">Microsoft Sentinel</span>
+                  <span class="skill-pill">Entra ID</span>
+                  <span class="skill-pill">Key Vault</span>
+                </div>
+              </div>
+              <div class="skills-pills-col">
+                <h4 class="pills-group-label">Concepts</h4>
+                <div class="skill-pills">
+                  <span class="skill-pill">Zero-Trust Architecture</span>
+                  <span class="skill-pill">CSPM</span>
+                  <span class="skill-pill">Cloud Threat Modelling</span>
+                  <span class="skill-pill">Shared Responsibility</span>
+                  <span class="skill-pill">CIS Benchmarks</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="tab-appsec" role="tabpanel" aria-labelledby="tabid-appsec" hidden>
+            <div class="skills-pills-grid">
+              <div class="skills-pills-col">
+                <h4 class="pills-group-label">Web Security</h4>
+                <div class="skill-pills">
+                  <span class="skill-pill">OWASP Top 10</span>
+                  <span class="skill-pill">SQL Injection</span>
+                  <span class="skill-pill">XSS &amp; CSRF</span>
+                  <span class="skill-pill">Auth &amp; Session Bugs</span>
+                </div>
+              </div>
+              <div class="skills-pills-col">
+                <h4 class="pills-group-label">Testing</h4>
+                <div class="skill-pills">
+                  <span class="skill-pill">Burp Suite</span>
+                  <span class="skill-pill">Web App Pentesting</span>
+                  <span class="skill-pill">OWASP ZAP</span>
+                </div>
+              </div>
+              <div class="skills-pills-col">
+                <h4 class="pills-group-label">Secure Development</h4>
+                <div class="skill-pills">
+                  <span class="skill-pill">Secure Code Review</span>
+                  <span class="skill-pill">Input Validation</span>
+                  <span class="skill-pill">Cryptography (AES-256)</span>
+                  <span class="skill-pill">RBAC Implementation</span>
+                </div>
+              </div>
+              <div class="skills-pills-col">
+                <h4 class="pills-group-label">Standards</h4>
+                <div class="skill-pills">
+                  <span class="skill-pill">NIST CSF</span>
+                  <span class="skill-pill">ISO 27001</span>
+                  <span class="skill-pill">MITRE ATT&amp;CK</span>
+                  <span class="skill-pill">CWE / CVE</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="tab-devsec" role="tabpanel" aria-labelledby="tabid-devsec" hidden>
+            <div class="skills-pills-grid">
+              <div class="skills-pills-col">
+                <h4 class="pills-group-label">Containers &amp; IaC</h4>
+                <div class="skill-pills">
+                  <span class="skill-pill">Docker Security</span>
+                  <span class="skill-pill">Container Hardening</span>
+                  <span class="skill-pill">Terraform Basics</span>
+                </div>
+              </div>
+              <div class="skills-pills-col">
+                <h4 class="pills-group-label">CI/CD Pipeline</h4>
+                <div class="skill-pills">
+                  <span class="skill-pill">GitHub Actions</span>
+                  <span class="skill-pill">Secrets Management</span>
+                  <span class="skill-pill">Dependency Scanning</span>
+                </div>
+              </div>
+              <div class="skills-pills-col">
+                <h4 class="pills-group-label">Practices</h4>
+                <div class="skill-pills">
+                  <span class="skill-pill">Shift-Left Security</span>
+                  <span class="skill-pill">Security as Code</span>
+                  <span class="skill-pill">Vulnerability Management</span>
+                  <span class="skill-pill">Git Security</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="tab-tools" role="tabpanel" aria-labelledby="tabid-tools" hidden>
+            <div class="skills-pills-grid">
+              <div class="skills-pills-col">
+                <h4 class="pills-group-label">Languages</h4>
+                <div class="skill-pills">
+                  <span class="skill-pill">Python</span>
+                  <span class="skill-pill">Bash</span>
+                  <span class="skill-pill">SQL</span>
+                </div>
+              </div>
+              <div class="skills-pills-col">
+                <h4 class="pills-group-label">Security Tools</h4>
+                <div class="skill-pills">
+                  <span class="skill-pill">Burp Suite</span>
+                  <span class="skill-pill">Nmap</span>
+                  <span class="skill-pill">Wireshark</span>
+                  <span class="skill-pill">Nessus</span>
+                  <span class="skill-pill">Metasploit</span>
+                  <span class="skill-pill">Kali Linux</span>
+                </div>
+              </div>
+              <div class="skills-pills-col">
+                <h4 class="pills-group-label">Dev &amp; Ops</h4>
+                <div class="skill-pills">
+                  <span class="skill-pill">Git</span>
+                  <span class="skill-pill">Docker</span>
+                  <span class="skill-pill">Terraform</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tech-tags" aria-label="Additional technologies">
+          <span class="tag">Python</span>
+          <span class="tag">AES-256</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Git</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Terraform</span>
+          <span class="tag">GitHub Actions</span>
+          <span class="tag">Nessus</span>
+          <span class="tag">Burp Suite</span>
+          <span class="tag">OWASP ZAP</span>
+          <span class="tag">MITRE ATT&amp;CK</span>
+          <span class="tag">NIST CSF</span>
+          <span class="tag">ISO 27001</span>
+          <span class="tag">CIS Benchmarks</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         CERTIFICATIONS SECTION
+    ═══════════════════════════════════════════ -->
+    <section id="certifications" aria-labelledby="certs-heading">
+      <div class="section-inner">
+        <div class="section-label">03 / Certifications</div>
+        <h2 id="certs-heading">Credentials</h2>
+        <p class="section-subtext">Industry-recognised certifications verifying hands-on cybersecurity competency.</p>
+
+        <div class="certs-grid">
+
+          <div class="cert-card cert-featured">
+            <div class="cert-verified">
+              <span class="verified-dot"></span> Verified
+            </div>
+            <div class="cert-logo">
+              <img class="cert-logo-img" src="Logos/CompTIA Security Plus Badge.png" alt="CompTIA Security+ Badge">
+            </div>
+            <h3 class="cert-name">CompTIA Security+</h3>
+            <p class="cert-code">SY0-701</p>
+            <p class="cert-desc">Globally recognised baseline security certification covering threat management, cryptography, identity management, and network security — a hiring requirement at many cybersecurity firms.</p>
+            <div class="cert-tags">
+              <span class="tag tag-green">Cryptography</span>
+              <span class="tag tag-green">IAM</span>
+              <span class="tag tag-green">Cloud Security</span>
+              <span class="tag tag-green">Network Security</span>
+            </div>
+            <a href="https://www.credly.com/earner/earned/badge/61395869-3172-4bd4-8838-37af231abf1f" class="cert-verify-link" target="_blank" rel="noopener noreferrer" aria-label="Verify CompTIA Security+ certificate on Credly">
+              View Certificate →
+            </a>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-verified">
+              <span class="verified-dot"></span> Verified
+            </div>
+            <div class="cert-logo">
+              <img class="cert-logo-img" src="Logos/Cisco SOC.svg" alt="Cisco SOC Logo">
+            </div>
+            <h3 class="cert-name">Cisco SOC</h3>
+            <p class="cert-code">Security Operations Centre</p>
+            <p class="cert-desc">Hands-on SOC analyst training covering intrusion detection, alert triage, and incident escalation workflows using industry-standard tooling.</p>
+            <div class="cert-tags">
+              <span class="tag">SOC Workflows</span>
+              <span class="tag">IDS/IPS</span>
+              <span class="tag">Incident Triage</span>
+            </div>
+            <a href="https://www.coursera.org/account/accomplishments/verify/WEK4QU74UZ9W" class="cert-verify-link" target="_blank" rel="noopener noreferrer" aria-label="Verify Cisco SOC certificate on Coursera">
+              View Certificate →
+            </a>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-verified">
+              <span class="verified-dot"></span> Verified
+            </div>
+            <div class="cert-logo">
+              <img class="cert-logo-img" src="Logos/Google Certificate Logo.png" alt="Google Cybersecurity Certificate Logo">
+            </div>
+            <h3 class="cert-name">Google Professional Cybersecurity</h3>
+            <p class="cert-code">Cybersecurity Certificate · Coursera</p>
+            <p class="cert-desc">Eight-module programme covering security foundations, network security, Linux, SQL, asset protection, Python automation, and cloud security fundamentals.</p>
+            <div class="cert-tags">
+              <span class="tag">Python Automation</span>
+              <span class="tag">Linux</span>
+              <span class="tag">NIST CSF</span>
+            </div>
+            <a href="https://www.coursera.org/account/accomplishments/specialization/BBI4LDE7CDW9" class="cert-verify-link" target="_blank" rel="noopener noreferrer" aria-label="Verify Google Cybersecurity certificate on Coursera">
+              View Certificate →
+            </a>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-verified">
+              <span class="verified-dot"></span> Verified
+            </div>
+            <div class="cert-logo">
+              <img class="cert-logo-img" src="Logos/Letsdefend.png" alt="LetsDefend Logo">
+            </div>
+            <h3 class="cert-name">SOC Analyst Learning Path</h3>
+            <p class="cert-code">LetsDefend · Dec 2025</p>
+            <p class="cert-desc">Comprehensive SOC analyst learning path covering alert analysis, log investigation, incident response, and hands-on threat detection using a real SIEM-based platform.</p>
+            <div class="cert-tags">
+              <span class="tag">Alert Analysis</span>
+              <span class="tag">Threat Detection</span>
+              <span class="tag">Incident Response</span>
+            </div>
+            <a href="https://app.letsdefend.io/certificate/show/b172f6f9-4aa4-4c3f-a2d2-d482345f2731" class="cert-verify-link" target="_blank" rel="noopener noreferrer" aria-label="Verify LetsDefend SOC Analyst certificate">
+              View Certificate →
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         PROJECTS SECTION
+    ═══════════════════════════════════════════ -->
+    <section id="projects" aria-labelledby="projects-heading">
+      <div class="section-inner">
+        <div class="section-label">04 / Projects</div>
+        <h2 id="projects-heading">Security Projects</h2>
+        <p class="section-subtext">Hands-on builds demonstrating practical security engineering — each project solves a real-world problem.</p>
+
+        <div class="projects-grid">
+
+          <!-- 01 CloudGuard -->
+          <article class="project-card project-featured" aria-labelledby="proj-cloudguard">
+            <div class="project-number">01</div>
+            <div class="project-content">
+              <h3 id="proj-cloudguard" class="project-title">CloudGuard</h3>
+              <p class="project-impact">☁️ AWS cloud misconfiguration detection tool for proactive security auditing</p>
+              <p class="project-desc">Misconfigured AWS environments are behind some of the most costly cloud breaches. CloudGuard automates detection of exposed EC2 instances, disabled CloudTrail logging, and open S3 buckets — checks drawn directly from the CIS AWS Foundations Benchmark — and outputs a prioritised risk report. Built entirely with Python and Boto3. No third-party scanning engine: pure SDK-level interrogation of the AWS environment.</p>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">AWS SDK (Boto3)</span>
+                <span class="tag">Cloud Security</span>
+                <span class="tag">IAM Analysis</span>
+                <span class="tag">S3 Audit</span>
+                <span class="tag">EC2</span>
+                <span class="tag">CloudTrail</span>
+              </div>
+              <a href="https://github.com/CyberSec-Sagar-Security/cloudguard" class="project-link" rel="noopener noreferrer" target="_blank" aria-label="View CloudGuard on GitHub">
+                View on GitHub →
+              </a>
+            </div>
+          </article>
+
+          <!-- 02 CryptoVaultX -->
+          <article class="project-card" aria-labelledby="proj-cryptovaultx">
+            <div class="project-number">02</div>
+            <div class="project-content">
+              <h3 id="proj-cryptovaultx" class="project-title">CryptoVaultX</h3>
+              <p class="project-impact">🔐 End-to-end encrypted file storage platform with client-side cryptography and role-based access control</p>
+              <p class="project-desc">Most file storage systems trust the server too much — plaintext data sits in databases waiting to be breached. CryptoVaultX encrypts files client-side with AES-256-GCM before they ever leave the browser, enforces role-based access control, and runs as a Dockerised microservice. Zero plaintext reaches the server at any point. Stack: Python, Flask, PostgreSQL, Docker.</p>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Flask</span>
+                <span class="tag">AES-256-GCM</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Docker</span>
+                <span class="tag">RBAC</span>
+                <span class="tag">Cryptography</span>
+              </div>
+              <a href="https://github.com/CyberSec-Sagar-Security/CryptoVaultX" class="project-link" rel="noopener noreferrer" target="_blank" aria-label="View CryptoVaultX on GitHub">
+                View on GitHub →
+              </a>
+            </div>
+          </article>
+
+          <!-- 03 NetTrace -->
+          <article class="project-card" aria-labelledby="proj-nettrace">
+            <div class="project-number">03</div>
+            <div class="project-content">
+              <h3 id="proj-nettrace" class="project-title">NetTrace</h3>
+              <p class="project-impact">🌐 Network reconnaissance and attack surface mapping tool built on Nmap automation</p>
+              <p class="project-desc">SOC analysts need to rapidly understand an environment's attack surface during an investigation — manual Nmap commands don't scale under pressure. NetTrace wraps Nmap automation in a Flask interface, enabling one-click network scanning, service enumeration, and port-to-risk mapping. Designed around a real L1 analyst investigation workflow, not a CTF.</p>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Flask</span>
+                <span class="tag">Nmap</span>
+                <span class="tag">Network Recon</span>
+                <span class="tag">Port Scanning</span>
+              </div>
+              <a href="https://github.com/CyberSec-Sagar-Security/NETTRACE" class="project-link" rel="noopener noreferrer" target="_blank" aria-label="View NetTrace on GitHub">
+                View on GitHub →
+              </a>
+            </div>
+          </article>
+
+          <!-- 04 Keylogger -->
+          <article class="project-card" aria-labelledby="proj-keylogger">
+            <div class="project-number">04</div>
+            <div class="project-content">
+              <div class="project-research-badge">Research Series: Adversary Simulation → Detection &nbsp;|&nbsp; Part 1 of 2</div>
+              <h3 id="proj-keylogger" class="project-title">KeyStroke Monitor</h3>
+              <p class="project-impact">🧪 OS-level keystroke capture tool for adversary simulation and detection research</p>
+              <p class="project-desc">Part 1 of a two-part security research project. To build an effective defence, you first need to understand the attack in detail. KeyStroke Monitor is a low-level OS keystroke capture tool built specifically to study the precise behavioural patterns of a real keylogger — API call sequences, timing signatures, and process injection methods.</p>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">OS APIs</span>
+                <span class="tag">Malware Simulation</span>
+                <span class="tag">Endpoint Security</span>
+              </div>
+              <a href="https://github.com/CyberSec-Sagar-Security/KeyStroke-Monitor" class="project-link" rel="noopener noreferrer" target="_blank" aria-label="View KeyStroke Monitor on GitHub">
+                View on GitHub →
+              </a>
+            </div>
+          </article>
+
+          <!-- 05 Anti-Keylogger -->
+          <article class="project-card" aria-labelledby="proj-antikeylogger">
+            <div class="project-number">05</div>
+            <div class="project-content">
+              <div class="project-research-badge">Research Series: Adversary Simulation → Detection &nbsp;|&nbsp; Part 2 of 2</div>
+              <h3 id="proj-antikeylogger" class="project-title">Anti-Keylogger</h3>
+              <p class="project-impact">🛡️ Behavior-based detection and mitigation tool for keystroke logging threats</p>
+              <p class="project-desc">Part 2 of the research series. Using the behavioural patterns mapped in Part 1, Anti-Keylogger detects and terminates unauthorised keystroke capture processes in real time — implementing process monitoring and behavioural detection logic that mirrors basic EDR functionality. Attack, understand, defend.</p>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Process Monitoring</span>
+                <span class="tag">EDR Concepts</span>
+                <span class="tag">Behavioral Detection</span>
+                <span class="tag">Defensive Security</span>
+              </div>
+              <a href="https://github.com/CyberSec-Sagar-Security/Anti-Keylogger" class="project-link" rel="noopener noreferrer" target="_blank" aria-label="View Anti-Keylogger on GitHub">
+                View on GitHub →
+              </a>
+            </div>
+          </article>
+
+          <!-- 06 PasswordCrack Suite -->
+          <article class="project-card project-wide" aria-labelledby="proj-passwordcrack">
+            <div class="project-number">06</div>
+            <div class="project-content">
+              <h3 id="proj-passwordcrack" class="project-title">PasswordCrack Suite</h3>
+              <p class="project-impact">🔓 Password security analysis toolkit for evaluating authentication weaknesses</p>
+              <p class="project-desc">Weak password policies remain a top credential attack vector. This toolkit simulates dictionary and brute-force attacks against common hashing algorithms to calculate real cracking time — making the risk concrete, not theoretical. Results are used to argue empirically for stronger hashing (bcrypt, Argon2), mandatory salting, and modern credential policy standards. Built for security awareness and policy validation, not exploitation.</p>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Hashing Algorithms</span>
+                <span class="tag">Brute Force Simulation</span>
+                <span class="tag">Authentication Security</span>
+              </div>
+              <a href="https://github.com/CyberSec-Sagar-Security/PasswordCrack-Suite" class="project-link" rel="noopener noreferrer" target="_blank" aria-label="View PasswordCrack Suite on GitHub">
+                View on GitHub →
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         EXPERIENCE SECTION
+    ═══════════════════════════════════════════ -->
+    <section id="experience" aria-labelledby="exp-heading">
+      <div class="section-inner">
+        <div class="section-label">05 / Experience</div>
+        <h2 id="exp-heading">Professional Experience</h2>
+        <p class="section-subtext">Structured professional security programmes modelling real enterprise analyst tasks — each engagement produced a formal deliverable against industry-standard frameworks.</p>
+
+        <div class="timeline">
+
+          <div class="timeline-item" role="article" aria-labelledby="exp-mastercard">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="timeline-org">
+                  <span class="org-name" id="exp-mastercard">Mastercard</span>
+                  <span class="org-badge">Forage Placement</span>
+                </div>
+                <span class="timeline-role">Cybersecurity Analyst</span>
+              </div>
+              <ul class="timeline-duties" role="list">
+                <li>Analysed real-pattern phishing emails targeting financial services employees — identified 8 distinct social engineering techniques and mapped each to MITRE ATT&amp;CK T1566 (Phishing).</li>
+                <li>Assessed organisational security awareness gaps using a simulated employee dataset, producing a targeted training intervention plan aligned to the identified risk profile.</li>
+                <li>Delivered a formal threat intelligence report structured to Tier-1 SOC analyst format — findings, severity ratings, and executive summary included.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="tag">Phishing Analysis</span>
+                <span class="tag">Threat Intel</span>
+                <span class="tag">Security Awareness</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item" role="article" aria-labelledby="exp-pwc">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="timeline-org">
+                  <span class="org-name" id="exp-pwc">PwC Switzerland</span>
+                  <span class="org-badge">Forage Placement</span>
+                </div>
+                <span class="timeline-role">Cybersecurity Consultant</span>
+              </div>
+              <ul class="timeline-duties" role="list">
+                <li>Performed an integrated security risk assessment for a simulated enterprise client — identified critical and high-severity findings and mapped each to ISO 27001 controls and NIST CSF functions.</li>
+                <li>Designed a network segmentation strategy to address identified lateral movement risks — produced a firewall rule recommendation set with business justification for each proposed change.</li>
+                <li>Structured risk findings in a PwC-format client advisory report, prioritised by business impact rather than raw CVSS score alone.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="tag">Risk Assessment</span>
+                <span class="tag">ISO 27001</span>
+                <span class="tag">NIST CSF</span>
+                <span class="tag">Network Security</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item" role="article" aria-labelledby="exp-tata">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="timeline-org">
+                  <span class="org-name" id="exp-tata">Tata Group</span>
+                  <span class="org-badge">Forage Placement</span>
+                </div>
+                <span class="timeline-role">IAM Security Analyst</span>
+              </div>
+              <ul class="timeline-duties" role="list">
+                <li>Designed an enterprise IAM architecture for a large-scale scenario — applied least-privilege principles across 200+ simulated user roles and produced a full access matrix covering all critical system tiers.</li>
+                <li>Developed an MFA strategy for privileged accounts, selecting authentication methods by risk tier: hardware tokens for admin access, TOTP for standard privileged users.</li>
+                <li>Documented architecture decisions as a structured security advisory aligned to Tata's governance reporting standards — written for a non-technical executive audience.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="tag">IAM</span>
+                <span class="tag">MFA</span>
+                <span class="tag">Least Privilege</span>
+                <span class="tag">Governance</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         RESEARCH SECTION
+    ═══════════════════════════════════════════ -->
+    <section id="research" aria-labelledby="research-heading">
+      <div class="section-inner">
+        <div class="section-label">06 / Research &amp; Achievements</div>
+        <h2 id="research-heading">Research &amp; Publications</h2>
+
+        <div class="research-card" role="article">
+          <div class="research-badge">📚 Published Research</div>
+          <h3 class="research-title">Building Cyber Resilience: The Interplay of Offensive and Defensive Security Strategies</h3>
+          <p class="research-meta">
+            <strong>Author:</strong> Sagar Balasaheb Suryawanshi<br />
+            <strong>Institution:</strong> KES' Shroff College of Arts and Commerce, Mumbai<br />
+            <strong>Year:</strong> 2024
+          </p>
+          <p class="research-abstract">
+            How much does offensive security knowledge actually improve defensive outcomes? This paper argues that red team, blue team, and purple team functions must be structurally connected — not run in silos — to build genuine cyber resilience. Supported by case study analysis of real breach scenarios, it maps specific offensive techniques to the defensive controls they bypass, and proposes an integrated resilience framework for organisations. Published at international conference, 2024 (ISBN: 978-93-342-8167-5).
+          </p>
+          <div class="research-tags">
+            <span class="tag tag-gold">Published</span>
+            <span class="tag">Cyber Resilience</span>
+            <span class="tag">Penetration Testing</span>
+            <span class="tag">Red Team / Blue Team</span>
+            <span class="tag">Purple Teaming</span>
+            <span class="tag">Threat Intelligence</span>
+            <span class="tag">Incident Response</span>
+          </div>
+        </div>
+
+        <div class="achievements-grid">
+          <div class="achievement-item">
+            <span class="achievement-icon">🏆</span>
+            <div>
+              <strong>Research Paper Author</strong>
+              <span>Authored a paper on building cyber resilience through offensive and defensive security strategies — published at KES' Shroff College of Arts and Commerce (2024).</span>
+            </div>
+          </div>
+          <div class="achievement-item">
+            <span class="achievement-icon">🛡️</span>
+            <div>
+              <strong>CompTIA Security+ (SY0-701)</strong>
+              <span>Passed one of the most rigorous entry-level security certification exams in the industry.</span>
+            </div>
+          </div>
+          <div class="achievement-item">
+            <span class="achievement-icon">🔬</span>
+            <div>
+              <strong>Full SOC Lab Build</strong>
+              <span>Independently designed, built, and operated a multi-VM SOC environment for continuous skills development.</span>
+            </div>
+          </div>
+          <div class="achievement-item">
+            <span class="achievement-icon">🌐</span>
+            <div>
+              <strong>3 Global Firm Placements</strong>
+              <span>Completed professional security placements with Mastercard, PwC Switzerland, and Tata Group.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CONTACT SECTION
+    ═══════════════════════════════════════════ -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <div class="section-inner">
+        <div class="section-label">07 / Contact</div>
+        <h2 id="contact-heading">Let's Connect</h2>
+        <p class="section-subtext contact-intro">
+          I am actively seeking cybersecurity roles in Ireland — focused on Cloud Security, Application Security, and DevSecOps.<br />
+          Whether you have a role, a question, or just want to talk security — I'd love to hear from you.
+        </p>
+
+        <div class="contact-grid">
+          <a href="mailto:sagar.suryawanshi@outlook.in" class="contact-card" aria-label="Send email to Sagar">
+            <span class="contact-icon">✉️</span>
+            <span class="contact-label">Email</span>
+            <span class="contact-value">sagar.suryawanshi@outlook.in</span>
+          </a>
+          <a href="https://www.linkedin.com/in/sagar--suryawanshi/" class="contact-card" rel="noopener noreferrer" target="_blank" aria-label="View LinkedIn profile">
+            <span class="contact-icon">💼</span>
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">linkedin.com/in/sagar--suryawanshi</span>
+          </a>
+          <a href="https://github.com/CyberSec-Sagar-Security?tab=repositories" class="contact-card" rel="noopener noreferrer" target="_blank" aria-label="View GitHub profile">
+            <span class="contact-icon">🐙</span>
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">github.com/CyberSec-Sagar-Security</span>
+          </a>
+          <div class="contact-card contact-cv">
+            <span class="contact-icon">📄</span>
+            <span class="contact-label">Curriculum Vitae</span>
+            <button id="contact-cv-btn" class="btn btn-primary btn-sm" aria-label="Download CV">Download CV</button>
+          </div>
+        </div>
+
+        <p class="gdpr-note">
+          🔐 <strong>GDPR Notice:</strong> No personal contact details (phone, address) are stored or transmitted by this page. CV download is processed client-side only.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <p class="footer-logo">Sagar B. Suryawanshi</p>
+      <p class="footer-tagline">Cybersecurity · Cloud Security · Application Security · DevSecOps</p>
+      <p class="footer-legal">Built with security-first principles · WCAG 2.1 AA · OWASP compliant at the frontend layer</p>
+    </div>
+  </footer>
+
+  <!-- Scripts — deferred, no inline event handlers -->
+  <script src="assets/js/photo.js" defer></script>
+  <script src="assets/js/resume.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

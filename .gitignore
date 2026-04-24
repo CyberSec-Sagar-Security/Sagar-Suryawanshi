@@ -1,0 +1,17 @@
+# Raw Base64 source files — NEVER push these
+photo_b64.txt
+resume_b64.txt
+
+# Internal documentation
+security-headers.md
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+*.bak
+*.log
+*.tmp
+
+# Original assets (kept local only)
+Gemini_Generated_Image_fq7uiyfq7uiyfq7u.png
+Sagar_Suryawanshi_Cybersecurity_CV.pdf
