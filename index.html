@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -66,13 +66,10 @@
             <span class="badge-dot"></span>
             <span>Available for Opportunities · Ireland</span>
           </div>
-          <h1 id="hero-heading">
-            Sagar B.<br />
-            <span class="hero-name-accent">Suryawanshi</span>
-          </h1>
+          <h1 id="hero-heading">Sagar B. <span class="hero-name-accent">Suryawanshi</span></h1>
           <p class="hero-title">Cybersecurity — Cloud · AppSec · DevSecOps</p>
           <p class="hero-focus">Cloud Security &nbsp;·&nbsp; Application Security &nbsp;·&nbsp; DevSecOps</p>
-          <p class="hero-subtitle">CompTIA Security+ (SY0-701) &nbsp;·&nbsp; Google Cybersecurity &nbsp;·&nbsp; CISCO SOC &nbsp;·&nbsp; LetsDefend</p>
+          <p class="hero-subtitle"><a href="https://www.credly.com/earner/earned/badge/61395869-3172-4bd4-8838-37af231abf1f" class="cert-link" target="_blank" rel="noopener noreferrer">CompTIA Security+ (SY0-701)</a> &nbsp;·&nbsp; <a href="https://www.coursera.org/account/accomplishments/specialization/BBI4LDE7CDW9" class="cert-link" target="_blank" rel="noopener noreferrer">Google Cybersecurity</a> &nbsp;·&nbsp; <a href="https://www.coursera.org/account/accomplishments/verify/WEK4QU74UZ9W" class="cert-link" target="_blank" rel="noopener noreferrer">CISCO SOC</a> &nbsp;·&nbsp; <a href="https://app.letsdefend.io/certificate/show/b172f6f9-4aa4-4c3f-a2d2-d482345f2731" class="cert-link" target="_blank" rel="noopener noreferrer">LetsDefend</a></p>
           <p class="hero-tagline">
             Building security tools across Cloud, AppSec, and DevSecOps — backed by CompTIA Security+, published research, and professional engagements with Mastercard, PwC Switzerland, and Tata Group.
           </p>
@@ -128,13 +125,16 @@
         <div class="about-grid">
           <div class="about-text">
             <p>
-              I'm a final-year B.Sc. IT student who doesn't wait for a job to start doing the work. I've built real security tools — a cloud misconfiguration scanner tested against live AWS environments, an AES-256 encrypted file platform with full RBAC — and taken them from idea to documented GitHub repository.
+              I got into cybersecurity because I wanted to understand how things break and more importantly, how to build them so they don't.
             </p>
             <p>
-              My security thinking spans Cloud, AppSec, and DevSecOps, backed by <strong>CompTIA Security+ (SY0-701)</strong> and hands-on engagements modelled on real Tier-1 analyst workflows at <strong>Mastercard</strong>, <strong>PwC Switzerland</strong>, and <strong>Tata Group</strong>. I also published research on offensive and defensive security strategy at an international conference in 2024.
+              Over the past two years I've spent evenings and weekends doing exactly that: building a cloud misconfiguration scanner from scratch, designing an AES-256 encrypted file platform, studying how keyloggers behave so I could write detection logic against them. Not because I needed to for a grade because I wanted to understand how it actually works under the hood.
             </p>
             <p>
-              I'm heading to Ireland for an MSc in Cybersecurity — and I'm actively looking for roles where I can contribute from week one, not after a six-month ramp-up.
+              Yes, AWS has Security Hub. Yes, enterprise tools exist for everything I've built. The point was never to replace them. The point was to understand them deeply enough that on day one of a role, I'm not learning what a misconfigured S3 bucket looks like I already know, because I've written code that finds them.
+            </p>
+            <p>
+              I'm heading to Ireland for an MSc in Cybersecurity and actively looking for a role where I can keep learning fast and contribute early. Cloud Security, AppSec, DevSecOps, Vulnerability Management, Secure Code Review I want to work across all of it.
             </p>
             <div class="about-highlights">
               <div class="highlight-item">
@@ -208,6 +208,15 @@
             </button>
             <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-tools" id="tabid-tools">
               <span class="tab-icon">🛠️</span> Tools &amp; Languages
+            </button>
+            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-secarch" id="tabid-secarch">
+              <span class="tab-icon">🏛️</span> Security Architecture
+            </button>
+            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-vulnmgmt" id="tabid-vulnmgmt">
+              <span class="tab-icon">🔍</span> Vulnerability Management
+            </button>
+            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-ssdlc" id="tabid-ssdlc">
+              <span class="tab-icon">📝</span> Secure Code Review
             </button>
           </div>
 
@@ -346,24 +355,77 @@
               </div>
             </div>
           </div>
+
+          <div class="tab-panel" id="tab-secarch" role="tabpanel" aria-labelledby="tabid-secarch" hidden>
+            <div class="skills-pills-grid">
+              <div class="skills-pills-col">
+                <h4 class="pills-group-label">Principles</h4>
+                <div class="skill-pills">
+                  <span class="skill-pill">Zero-Trust Architecture</span>
+                  <span class="skill-pill">Defence-in-Depth</span>
+                  <span class="skill-pill">Network Segmentation</span>
+                </div>
+              </div>
+              <div class="skills-pills-col">
+                <h4 class="pills-group-label">Identity &amp; Access</h4>
+                <div class="skill-pills">
+                  <span class="skill-pill">IAM Design &amp; Least Privilege</span>
+                  <span class="skill-pill">Identity Federation</span>
+                </div>
+              </div>
+              <div class="skills-pills-col">
+                <h4 class="pills-group-label">Design</h4>
+                <div class="skill-pills">
+                  <span class="skill-pill">Threat Modelling (STRIDE)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="tab-vulnmgmt" role="tabpanel" aria-labelledby="tabid-vulnmgmt" hidden>
+            <div class="skills-pills-grid">
+              <div class="skills-pills-col">
+                <h4 class="pills-group-label">Assessment</h4>
+                <div class="skill-pills">
+                  <span class="skill-pill">CVSS Scoring (v3.1)</span>
+                  <span class="skill-pill">Nessus Scanning</span>
+                  <span class="skill-pill">CVE / NVD Research</span>
+                </div>
+              </div>
+              <div class="skills-pills-col">
+                <h4 class="pills-group-label">Process</h4>
+                <div class="skill-pills">
+                  <span class="skill-pill">Risk Prioritisation</span>
+                  <span class="skill-pill">Vulnerability Triage</span>
+                  <span class="skill-pill">Patch Workflow Design</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="tab-ssdlc" role="tabpanel" aria-labelledby="tabid-ssdlc" hidden>
+            <div class="skills-pills-grid">
+              <div class="skills-pills-col">
+                <h4 class="pills-group-label">Code Review</h4>
+                <div class="skill-pills">
+                  <span class="skill-pill">Manual Code Review (Python, JS)</span>
+                  <span class="skill-pill">OWASP Secure Coding Practices</span>
+                  <span class="skill-pill">Dependency Vulnerability Scanning</span>
+                </div>
+              </div>
+              <div class="skills-pills-col">
+                <h4 class="pills-group-label">SDLC Integration</h4>
+                <div class="skill-pills">
+                  <span class="skill-pill">Shift-Left Security</span>
+                  <span class="skill-pill">Threat Modelling in SDLC</span>
+                  <span class="skill-pill">Security Requirements Definition</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="tech-tags" aria-label="Additional technologies">
-          <span class="tag">Python</span>
-          <span class="tag">AES-256</span>
-          <span class="tag">SQL</span>
-          <span class="tag">Git</span>
-          <span class="tag">Docker</span>
-          <span class="tag">Terraform</span>
-          <span class="tag">GitHub Actions</span>
-          <span class="tag">Nessus</span>
-          <span class="tag">Burp Suite</span>
-          <span class="tag">OWASP ZAP</span>
-          <span class="tag">MITRE ATT&amp;CK</span>
-          <span class="tag">NIST CSF</span>
-          <span class="tag">ISO 27001</span>
-          <span class="tag">CIS Benchmarks</span>
-        </div>
+
       </div>
     </section>
 
@@ -380,9 +442,6 @@
         <div class="certs-grid">
 
           <div class="cert-card cert-featured">
-            <div class="cert-verified">
-              <span class="verified-dot"></span> Verified
-            </div>
             <div class="cert-logo">
               <img class="cert-logo-img" src="Logos/CompTIA Security Plus Badge.png" alt="CompTIA Security+ Badge">
             </div>
@@ -401,9 +460,6 @@
           </div>
 
           <div class="cert-card">
-            <div class="cert-verified">
-              <span class="verified-dot"></span> Verified
-            </div>
             <div class="cert-logo">
               <img class="cert-logo-img" src="Logos/Cisco SOC.svg" alt="Cisco SOC Logo">
             </div>
@@ -421,9 +477,6 @@
           </div>
 
           <div class="cert-card">
-            <div class="cert-verified">
-              <span class="verified-dot"></span> Verified
-            </div>
             <div class="cert-logo">
               <img class="cert-logo-img" src="Logos/Google Certificate Logo.png" alt="Google Cybersecurity Certificate Logo">
             </div>
@@ -441,9 +494,6 @@
           </div>
 
           <div class="cert-card">
-            <div class="cert-verified">
-              <span class="verified-dot"></span> Verified
-            </div>
             <div class="cert-logo">
               <img class="cert-logo-img" src="Logos/Letsdefend.png" alt="LetsDefend Logo">
             </div>
@@ -717,6 +767,10 @@
             <span class="tag">Threat Intelligence</span>
             <span class="tag">Incident Response</span>
           </div>
+          <div class="research-links">
+            <a href="https://isbn.gov.in/Home/IsbnSearch" class="cert-verify-link" target="_blank" rel="noopener noreferrer" aria-label="Verify ISBN 978-93-342-8167-5 on isbn.gov.in">Verify ISBN: 978-93-342-8167-5 →</a>
+            <button id="research-cert-btn" class="cert-verify-link research-cert-btn" type="button" aria-label="View Research Paper Publication Certificate">View Publication Certificate →</button>
+          </div>
         </div>
 
         <div class="achievements-grid">
@@ -760,10 +814,7 @@
       <div class="section-inner">
         <div class="section-label">07 / Contact</div>
         <h2 id="contact-heading">Let's Connect</h2>
-        <p class="section-subtext contact-intro">
-          I am actively seeking cybersecurity roles in Ireland — focused on Cloud Security, Application Security, and DevSecOps.<br />
-          Whether you have a role, a question, or just want to talk security — I'd love to hear from you.
-        </p>
+        
 
         <div class="contact-grid">
           <a href="mailto:sagar.suryawanshi@outlook.in" class="contact-card" aria-label="Send email to Sagar">
@@ -787,10 +838,6 @@
             <button id="contact-cv-btn" class="btn btn-primary btn-sm" aria-label="Download CV">Download CV</button>
           </div>
         </div>
-
-        <p class="gdpr-note">
-          🔐 <strong>GDPR Notice:</strong> No personal contact details (phone, address) are stored or transmitted by this page. CV download is processed client-side only.
-        </p>
       </div>
     </section>
   </main>
@@ -800,13 +847,14 @@
     <div class="footer-inner">
       <p class="footer-logo">Sagar B. Suryawanshi</p>
       <p class="footer-tagline">Cybersecurity · Cloud Security · Application Security · DevSecOps</p>
-      <p class="footer-legal">Built with security-first principles · WCAG 2.1 AA · OWASP compliant at the frontend layer</p>
     </div>
   </footer>
 
   <!-- Scripts — deferred, no inline event handlers -->
   <script src="assets/js/photo.js" defer></script>
   <script src="assets/js/resume.js" defer></script>
+  <script src="assets/js/research-cert.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>
+
