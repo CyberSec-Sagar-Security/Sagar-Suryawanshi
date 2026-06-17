@@ -179,9 +179,9 @@
   ───────────────────────────────────────────────────────── */
   function initReveal() {
     const revealTargets = [
-      '.project-card', '.cert-card', '.timeline-card',
+      '.project-card', '.cert-card', '.cert-card-v2', '.timeline-card',
       '.stat-card', '.skills-pills-col', '.achievement-item',
-      '.contact-card', '.research-card', '.highlight-item',
+      '.contact-card', '.contact-row-v2', '.research-card', '.highlight-item',
     ];
     const elements = document.querySelectorAll(revealTargets.join(','));
 
@@ -322,5 +322,45 @@
     // Set initial aria-label based on current theme
     updateToggleLabel();
   }
+
+  /* ─────────────────────────────────────────────────────────
+     COPY TO CLIPBOARD — contact section copy buttons
+  ───────────────────────────────────────────────────────── */
+  function initCopyButtons() {
+    document.querySelectorAll('.copy-btn-v2').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var text = btn.getAttribute('data-copy');
+        if (!text) return;
+
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(text).then(function () {
+            showToast('Copied to clipboard!', 'success');
+          }).catch(function () {
+            fallbackCopy(text);
+          });
+        } else {
+          fallbackCopy(text);
+        }
+      });
+    });
+  }
+
+  function fallbackCopy(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.cssText = 'position:fixed;left:-9999px;top:-9999px;opacity:0';
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    try {
+      document.execCommand('copy');
+      showToast('Copied to clipboard!', 'success');
+    } catch (e) {
+      showToast('Could not copy — please copy manually.', 'error');
+    }
+    document.body.removeChild(ta);
+  }
+
+  initCopyButtons();
 
 })();
