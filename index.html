@@ -15,11 +15,11 @@
 
   <title>Sagar B. Suryawanshi — Cybersecurity</title>
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts with SRI -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap"
     rel="stylesheet"
     crossorigin="anonymous"
   />
@@ -34,9 +34,7 @@
   <!-- Navigation -->
   <nav id="navbar" role="navigation" aria-label="Primary navigation">
     <div class="nav-inner">
-      <a href="#hero" class="nav-logo" aria-label="Sagar Suryawanshi home">
-        <span class="nav-monogram" aria-hidden="true">SB</span>
-      </a>
+      <a href="#hero" class="nav-logo" aria-label="Sagar Suryawanshi home">Sagar</a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -70,25 +68,14 @@
           </div>
           <h1 id="hero-heading">Sagar B. <span class="hero-name-accent">Suryawanshi</span></h1>
           <p class="hero-title">Cybersecurity — Cloud · AppSec · DevSecOps</p>
-          <div class="hero-keywords" role="list" aria-label="Specialisations">
-            <span class="hero-keyword" role="listitem">Cloud Security</span>
-            <span class="hero-keyword" role="listitem">Application Security</span>
-            <span class="hero-keyword" role="listitem">DevSecOps</span>
-            <span class="hero-keyword" role="listitem">Vulnerability Management</span>
-            <span class="hero-keyword" role="listitem">Security Architecture</span>
-          </div>
-          <div class="hero-cert-strip" aria-label="Certifications">
-            <a href="https://www.credly.com/earner/earned/badge/61395869-3172-4bd4-8838-37af231abf1f" class="hero-cert-pill" target="_blank" rel="noopener noreferrer">CompTIA Security+ (SY0-701)</a>
-            <a href="https://www.coursera.org/account/accomplishments/specialization/BBI4LDE7CDW9" class="hero-cert-pill" target="_blank" rel="noopener noreferrer">Google Cybersecurity</a>
-            <a href="https://www.coursera.org/account/accomplishments/verify/WEK4QU74UZ9W" class="hero-cert-pill" target="_blank" rel="noopener noreferrer">Cisco SOC</a>
-            <a href="https://app.letsdefend.io/certificate/show/b172f6f9-4aa4-4c3f-a2d2-d482345f2731" class="hero-cert-pill" target="_blank" rel="noopener noreferrer">LetsDefend</a>
-          </div>
+          <p class="hero-focus">Cloud Security &nbsp;·&nbsp; Application Security &nbsp;·&nbsp; DevSecOps</p>
+          <p class="hero-subtitle"><a href="https://www.credly.com/earner/earned/badge/61395869-3172-4bd4-8838-37af231abf1f" class="cert-link" target="_blank" rel="noopener noreferrer">CompTIA Security+ (SY0-701)</a> &nbsp;·&nbsp; <a href="https://www.coursera.org/account/accomplishments/specialization/BBI4LDE7CDW9" class="cert-link" target="_blank" rel="noopener noreferrer">Google Cybersecurity</a> &nbsp;·&nbsp; <a href="https://www.coursera.org/account/accomplishments/verify/WEK4QU74UZ9W" class="cert-link" target="_blank" rel="noopener noreferrer">CISCO SOC</a> &nbsp;·&nbsp; <a href="https://app.letsdefend.io/certificate/show/b172f6f9-4aa4-4c3f-a2d2-d482345f2731" class="cert-link" target="_blank" rel="noopener noreferrer">LetsDefend</a></p>
           <p class="hero-tagline">
             Building security tools across Cloud, AppSec, and DevSecOps — backed by CompTIA Security+, published research, and professional engagements with Mastercard, PwC Switzerland, and Tata Group.
           </p>
           <div class="hero-cta">
             <a href="#projects" class="btn btn-primary">View Projects</a>
-            <a href="https://github.com/CyberSec-Sagar-Security" class="btn btn-outline" target="_blank" rel="noopener noreferrer" aria-label="View GitHub profile">View GitHub</a>
+            <button id="hero-cv-btn" class="btn btn-outline" aria-label="Download CV">Download CV</button>
           </div>
           <div class="hero-trust">
             <div class="trust-item">
@@ -97,7 +84,7 @@
             </div>
             <div class="trust-divider"></div>
             <div class="trust-item">
-              <span class="trust-number">7</span>
+              <span class="trust-number">6</span>
               <span class="trust-label">Security Projects</span>
             </div>
             <div class="trust-divider"></div>
@@ -177,7 +164,7 @@
             <div class="stat-card">
               <span class="stat-icon">☁️</span>
               <strong>Cloud Security</strong>
-              <span>AWS · Azure</span>
+              <span>AWS · Azure · GCP</span>
             </div>
             <div class="stat-card">
               <span class="stat-icon">🔐</span>
@@ -222,8 +209,14 @@
             <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-tools" id="tabid-tools">
               <span class="tab-icon">🛠️</span> Tools &amp; Languages
             </button>
+            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-secarch" id="tabid-secarch">
+              <span class="tab-icon">🏛️</span> Security Architecture
+            </button>
             <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-vulnmgmt" id="tabid-vulnmgmt">
-              <span class="tab-icon">🔍</span> Vuln &amp; Architecture
+              <span class="tab-icon">🔍</span> Vulnerability Management
+            </button>
+            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-ssdlc" id="tabid-ssdlc">
+              <span class="tab-icon">📝</span> Secure Code Review
             </button>
           </div>
 
@@ -298,17 +291,6 @@
                   <span class="skill-pill">CWE / CVE</span>
                 </div>
               </div>
-              <div class="skills-pills-col">
-                <h4 class="pills-group-label">Secure Code Review</h4>
-                <div class="skill-pills">
-                  <span class="skill-pill">Manual Code Review (Python, JS)</span>
-                  <span class="skill-pill">OWASP Secure Coding Practices</span>
-                  <span class="skill-pill">Dependency Vulnerability Scanning</span>
-                  <span class="skill-pill">Shift-Left Security</span>
-                  <span class="skill-pill">Threat Modelling in SDLC</span>
-                  <span class="skill-pill">Security Requirements Definition</span>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -374,8 +356,33 @@
             </div>
           </div>
 
+          <div class="tab-panel" id="tab-secarch" role="tabpanel" aria-labelledby="tabid-secarch" hidden>
+            <div class="skills-pills-grid">
+              <div class="skills-pills-col">
+                <h4 class="pills-group-label">Principles</h4>
+                <div class="skill-pills">
+                  <span class="skill-pill">Zero-Trust Architecture</span>
+                  <span class="skill-pill">Defence-in-Depth</span>
+                  <span class="skill-pill">Network Segmentation</span>
+                </div>
+              </div>
+              <div class="skills-pills-col">
+                <h4 class="pills-group-label">Identity &amp; Access</h4>
+                <div class="skill-pills">
+                  <span class="skill-pill">IAM Design &amp; Least Privilege</span>
+                  <span class="skill-pill">Identity Federation</span>
+                </div>
+              </div>
+              <div class="skills-pills-col">
+                <h4 class="pills-group-label">Design</h4>
+                <div class="skill-pills">
+                  <span class="skill-pill">Threat Modelling (STRIDE)</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-<div class="tab-panel" id="tab-vulnmgmt" role="tabpanel" aria-labelledby="tabid-vulnmgmt" hidden>
+          <div class="tab-panel" id="tab-vulnmgmt" role="tabpanel" aria-labelledby="tabid-vulnmgmt" hidden>
             <div class="skills-pills-grid">
               <div class="skills-pills-col">
                 <h4 class="pills-group-label">Assessment</h4>
@@ -393,15 +400,25 @@
                   <span class="skill-pill">Patch Workflow Design</span>
                 </div>
               </div>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="tab-ssdlc" role="tabpanel" aria-labelledby="tabid-ssdlc" hidden>
+            <div class="skills-pills-grid">
               <div class="skills-pills-col">
-                <h4 class="pills-group-label">Security Architecture</h4>
+                <h4 class="pills-group-label">Code Review</h4>
                 <div class="skill-pills">
-                  <span class="skill-pill">Zero-Trust Architecture</span>
-                  <span class="skill-pill">Defence-in-Depth</span>
-                  <span class="skill-pill">Network Segmentation</span>
-                  <span class="skill-pill">IAM Design &amp; Least Privilege</span>
-                  <span class="skill-pill">Identity Federation</span>
-                  <span class="skill-pill">Threat Modelling (STRIDE)</span>
+                  <span class="skill-pill">Manual Code Review (Python, JS)</span>
+                  <span class="skill-pill">OWASP Secure Coding Practices</span>
+                  <span class="skill-pill">Dependency Vulnerability Scanning</span>
+                </div>
+              </div>
+              <div class="skills-pills-col">
+                <h4 class="pills-group-label">SDLC Integration</h4>
+                <div class="skill-pills">
+                  <span class="skill-pill">Shift-Left Security</span>
+                  <span class="skill-pill">Threat Modelling in SDLC</span>
+                  <span class="skill-pill">Security Requirements Definition</span>
                 </div>
               </div>
             </div>
@@ -417,69 +434,79 @@
          CERTIFICATIONS SECTION
     ═══════════════════════════════════════════ -->
     <section id="certifications" aria-labelledby="certs-heading">
-      <div class="section-inner certs-section-inner">
+      <div class="section-inner">
         <div class="section-label">03 / Certifications</div>
-        <h2 id="certs-heading">Certifications</h2>
-        <p class="section-subtext"><span class="accent-text">Industry-Recognised</span> Credentials &amp; Qualifications</p>
+        <h2 id="certs-heading">Credentials</h2>
+        <p class="section-subtext">Industry-recognised certifications verifying hands-on cybersecurity competency.</p>
 
-        <div class="certs-grid-v2">
+        <div class="certs-grid">
 
-          <!-- CompTIA Security+ — Featured -->
-          <div class="cert-card-v2 cert-card-v2-featured">
-            <div class="cert-ribbon">FEATURED</div>
-            <div class="cert-logo-wrap-v2">
-              <img src="Logos/CompTIA Security Plus Badge.png" alt="CompTIA Security+ Badge" class="cert-logo-img-v2">
+          <div class="cert-card cert-featured">
+            <div class="cert-logo">
+              <img class="cert-logo-img" src="Logos/CompTIA Security Plus Badge.png" alt="CompTIA Security+ Badge">
             </div>
-            <h3 class="cert-name-v2">CompTIA Security+</h3>
-            <p class="cert-issuer-v2">CompTIA</p>
-            <p class="cert-fullname-v2">Security Fundamentals Certification</p>
-            <p class="cert-date-v2">Issued 2024 · Expires 2027</p>
-            <a href="https://www.credly.com/earner/earned/badge/61395869-3172-4bd4-8838-37af231abf1f" class="cert-verify-btn-v2" target="_blank" rel="noopener noreferrer" aria-label="Verify CompTIA Security+ on Credly">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              Verify
+            <h3 class="cert-name">CompTIA Security+</h3>
+            <p class="cert-code">SY0-701</p>
+            <p class="cert-desc">Globally recognised baseline security certification covering threat management, cryptography, identity management, and network security — a hiring requirement at many cybersecurity firms.</p>
+            <div class="cert-tags">
+              <span class="tag tag-green">Cryptography</span>
+              <span class="tag tag-green">IAM</span>
+              <span class="tag tag-green">Cloud Security</span>
+              <span class="tag tag-green">Network Security</span>
+            </div>
+            <a href="https://www.credly.com/earner/earned/badge/61395869-3172-4bd4-8838-37af231abf1f" class="cert-verify-link" target="_blank" rel="noopener noreferrer" aria-label="Verify CompTIA Security+ certificate on Credly">
+              View Certificate →
             </a>
           </div>
 
-          <!-- Cisco SOC -->
-          <div class="cert-card-v2">
-            <div class="cert-logo-wrap-v2">
-              <img src="Logos/Cisco SOC.svg" alt="Cisco SOC Logo" class="cert-logo-img-v2">
+          <div class="cert-card">
+            <div class="cert-logo">
+              <img class="cert-logo-img" src="Logos/Cisco SOC.svg" alt="Cisco SOC Logo">
             </div>
-            <h3 class="cert-name-v2">Cisco SOC</h3>
-            <p class="cert-issuer-v2">Cisco / Coursera</p>
-            <p class="cert-fullname-v2">Security Operations Centre</p>
-            <a href="https://www.coursera.org/account/accomplishments/verify/WEK4QU74UZ9W" class="cert-verify-btn-v2" target="_blank" rel="noopener noreferrer" aria-label="Verify Cisco SOC on Coursera">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              Verify
+            <h3 class="cert-name">Cisco SOC</h3>
+            <p class="cert-code">Security Operations Centre</p>
+            <p class="cert-desc">Hands-on SOC analyst training covering intrusion detection, alert triage, and incident escalation workflows using industry-standard tooling.</p>
+            <div class="cert-tags">
+              <span class="tag">SOC Workflows</span>
+              <span class="tag">IDS/IPS</span>
+              <span class="tag">Incident Triage</span>
+            </div>
+            <a href="https://www.coursera.org/account/accomplishments/verify/WEK4QU74UZ9W" class="cert-verify-link" target="_blank" rel="noopener noreferrer" aria-label="Verify Cisco SOC certificate on Coursera">
+              View Certificate →
             </a>
           </div>
 
-          <!-- Google Cybersecurity -->
-          <div class="cert-card-v2">
-            <div class="cert-logo-wrap-v2">
-              <img src="Logos/Google Certificate Logo.png" alt="Google Cybersecurity Certificate Logo" class="cert-logo-img-v2">
+          <div class="cert-card">
+            <div class="cert-logo">
+              <img class="cert-logo-img" src="Logos/Google Certificate Logo.png" alt="Google Cybersecurity Certificate Logo">
             </div>
-            <h3 class="cert-name-v2">Google Cybersecurity</h3>
-            <p class="cert-issuer-v2">Google / Coursera</p>
-            <p class="cert-fullname-v2">Professional Cybersecurity Certificate</p>
-            <a href="https://www.coursera.org/account/accomplishments/specialization/BBI4LDE7CDW9" class="cert-verify-btn-v2" target="_blank" rel="noopener noreferrer" aria-label="Verify Google Cybersecurity Certificate on Coursera">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              Verify
+            <h3 class="cert-name">Google Professional Cybersecurity</h3>
+            <p class="cert-code">Cybersecurity Certificate · Coursera</p>
+            <p class="cert-desc">Eight-module programme covering security foundations, network security, Linux, SQL, asset protection, Python automation, and cloud security fundamentals.</p>
+            <div class="cert-tags">
+              <span class="tag">Python Automation</span>
+              <span class="tag">Linux</span>
+              <span class="tag">NIST CSF</span>
+            </div>
+            <a href="https://www.coursera.org/account/accomplishments/specialization/BBI4LDE7CDW9" class="cert-verify-link" target="_blank" rel="noopener noreferrer" aria-label="Verify Google Cybersecurity certificate on Coursera">
+              View Certificate →
             </a>
           </div>
 
-          <!-- LetsDefend -->
-          <div class="cert-card-v2">
-            <div class="cert-logo-wrap-v2">
-              <img src="Logos/Letsdefend.png" alt="LetsDefend Logo" class="cert-logo-img-v2">
+          <div class="cert-card">
+            <div class="cert-logo">
+              <img class="cert-logo-img" src="Logos/Letsdefend.png" alt="LetsDefend Logo">
             </div>
-            <h3 class="cert-name-v2">SOC Analyst Path</h3>
-            <p class="cert-issuer-v2">LetsDefend</p>
-            <p class="cert-fullname-v2">SOC Analyst Learning Path</p>
-            <p class="cert-date-v2">Completed Dec 2025</p>
-            <a href="https://app.letsdefend.io/certificate/show/b172f6f9-4aa4-4c3f-a2d2-d482345f2731" class="cert-verify-btn-v2" target="_blank" rel="noopener noreferrer" aria-label="Verify LetsDefend SOC Analyst certificate">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              Verify
+            <h3 class="cert-name">SOC Analyst Learning Path</h3>
+            <p class="cert-code">LetsDefend · Dec 2025</p>
+            <p class="cert-desc">Comprehensive SOC analyst learning path covering alert analysis, log investigation, incident response, and hands-on threat detection using a real SIEM-based platform.</p>
+            <div class="cert-tags">
+              <span class="tag">Alert Analysis</span>
+              <span class="tag">Threat Detection</span>
+              <span class="tag">Incident Response</span>
+            </div>
+            <a href="https://app.letsdefend.io/certificate/show/b172f6f9-4aa4-4c3f-a2d2-d482345f2731" class="cert-verify-link" target="_blank" rel="noopener noreferrer" aria-label="Verify LetsDefend SOC Analyst certificate">
+              View Certificate →
             </a>
           </div>
 
@@ -498,41 +525,9 @@
 
         <div class="projects-grid">
 
-          <!-- 01 PhishSentinel -->
-          <article class="project-card project-featured" aria-labelledby="proj-phishsentinel">
-            <div class="project-number">01</div>
-            <div class="project-content">
-              <div class="project-research-badge">ML · Detection Engineering</div>
-              <h3 id="proj-phishsentinel" class="project-title">PhishSentinel</h3>
-              <p class="project-impact">🛡️ Production-grade ML phishing email detection — 961 features, 5-model ensemble, 95% F1 on 412K emails</p>
-              <p class="project-desc">Phishing remains the #1 initial access vector across all major breach datasets. PhishSentinel tackles it with a defence-in-depth ML pipeline: 8 independent detection layers that must all be simultaneously evaded to deliver a phishing email undetected. When the ML model is uncertain, external threat intelligence APIs and ChatGPT AI provide independent confirmation — catching sophisticated attacks that evade any single method. Built entirely from first principles in Python; trained on 412,265 emails across 8 dataset sources.</p>
-              <p class="project-stats">961 features · 95.05% F1 · 412K emails · 6 TI APIs</p>
-              <div class="project-tags">
-                <span class="tag">Python</span>
-                <span class="tag">LightGBM</span>
-                <span class="tag">XGBoost</span>
-                <span class="tag">SHAP + LIME</span>
-                <span class="tag">MITRE ATT&amp;CK</span>
-                <span class="tag">VirusTotal API</span>
-                <span class="tag">ChatGPT AI</span>
-                <span class="tag">Docker</span>
-                <span class="tag">GitHub Actions</span>
-                <span class="tag">HuggingFace Spaces</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/CyberSec-Sagar-Security/PhishSentinel" class="project-link" rel="noopener noreferrer" target="_blank" aria-label="View PhishSentinel on GitHub">
-                  View on GitHub →
-                </a>
-                <a href="https://huggingface.co/spaces/SagarTony90265/PhishSentinel" class="project-link project-link-demo" rel="noopener noreferrer" target="_blank" aria-label="View PhishSentinel live demo on HuggingFace">
-                  Live on HuggingFace Spaces ↗
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- 02 CloudGuard -->
+          <!-- 01 CloudGuard -->
           <article class="project-card project-featured" aria-labelledby="proj-cloudguard">
-            <div class="project-number">02</div>
+            <div class="project-number">01</div>
             <div class="project-content">
               <h3 id="proj-cloudguard" class="project-title">CloudGuard</h3>
               <p class="project-impact">☁️ AWS cloud misconfiguration detection tool for proactive security auditing</p>
@@ -552,9 +547,9 @@
             </div>
           </article>
 
-          <!-- 03 CryptoVaultX -->
+          <!-- 02 CryptoVaultX -->
           <article class="project-card" aria-labelledby="proj-cryptovaultx">
-            <div class="project-number">03</div>
+            <div class="project-number">02</div>
             <div class="project-content">
               <h3 id="proj-cryptovaultx" class="project-title">CryptoVaultX</h3>
               <p class="project-impact">🔐 End-to-end encrypted file storage platform with client-side cryptography and role-based access control</p>
@@ -574,9 +569,9 @@
             </div>
           </article>
 
-          <!-- 04 NetTrace -->
+          <!-- 03 NetTrace -->
           <article class="project-card" aria-labelledby="proj-nettrace">
-            <div class="project-number">04</div>
+            <div class="project-number">03</div>
             <div class="project-content">
               <h3 id="proj-nettrace" class="project-title">NetTrace</h3>
               <p class="project-impact">🌐 Network reconnaissance and attack surface mapping tool built on Nmap automation</p>
@@ -594,9 +589,9 @@
             </div>
           </article>
 
-          <!-- 05 Keylogger -->
+          <!-- 04 Keylogger -->
           <article class="project-card" aria-labelledby="proj-keylogger">
-            <div class="project-number">05</div>
+            <div class="project-number">04</div>
             <div class="project-content">
               <div class="project-research-badge">Research Series: Adversary Simulation → Detection &nbsp;|&nbsp; Part 1 of 2</div>
               <h3 id="proj-keylogger" class="project-title">KeyStroke Monitor</h3>
@@ -614,9 +609,9 @@
             </div>
           </article>
 
-          <!-- 06 Anti-Keylogger -->
+          <!-- 05 Anti-Keylogger -->
           <article class="project-card" aria-labelledby="proj-antikeylogger">
-            <div class="project-number">06</div>
+            <div class="project-number">05</div>
             <div class="project-content">
               <div class="project-research-badge">Research Series: Adversary Simulation → Detection &nbsp;|&nbsp; Part 2 of 2</div>
               <h3 id="proj-antikeylogger" class="project-title">Anti-Keylogger</h3>
@@ -635,12 +630,12 @@
             </div>
           </article>
 
-          <!-- 07 CredentialRisk Auditor -->
-          <article class="project-card" aria-labelledby="proj-credentialrisk">
-            <div class="project-number">07</div>
+          <!-- 06 PasswordCrack Suite -->
+          <article class="project-card" aria-labelledby="proj-passwordcrack">
+            <div class="project-number">06</div>
             <div class="project-content">
-              <h3 id="proj-credentialrisk" class="project-title">CredentialRisk Auditor</h3>
-              <p class="project-impact">Authentication security analysis tool for evaluating password policy weaknesses and hashing algorithm strength</p>
+              <h3 id="proj-passwordcrack" class="project-title">PasswordCrack Suite</h3>
+              <p class="project-impact">🔓 Password security analysis toolkit for evaluating authentication weaknesses</p>
               <p class="project-desc">Weak password policies remain a top credential attack vector. This toolkit simulates dictionary and brute-force attacks against common hashing algorithms to calculate real cracking time — making the risk concrete, not theoretical. Results are used to argue empirically for stronger hashing (bcrypt, Argon2), mandatory salting, and modern credential policy standards. Built for security awareness and policy validation, not exploitation.</p>
               <div class="project-tags">
                 <span class="tag">Python</span>
@@ -648,7 +643,7 @@
                 <span class="tag">Brute Force Simulation</span>
                 <span class="tag">Authentication Security</span>
               </div>
-              <a href="https://github.com/CyberSec-Sagar-Security/PasswordCrack-Suite" class="project-link" rel="noopener noreferrer" target="_blank" aria-label="View CredentialRisk Auditor on GitHub">
+              <a href="https://github.com/CyberSec-Sagar-Security/PasswordCrack-Suite" class="project-link" rel="noopener noreferrer" target="_blank" aria-label="View PasswordCrack Suite on GitHub">
                 View on GitHub →
               </a>
             </div>
@@ -664,8 +659,8 @@
     <section id="experience" aria-labelledby="exp-heading">
       <div class="section-inner">
         <div class="section-label">05 / Experience</div>
-        <h2 id="exp-heading">Simulated Industry Experience</h2>
-        <p class="section-subtext">Structured virtual programmes modelling real enterprise security analyst tasks — each engagement produced a formal deliverable against industry-standard frameworks.</p>
+        <h2 id="exp-heading">Professional Experience</h2>
+        <p class="section-subtext">Structured professional security programmes modelling real enterprise analyst tasks — each engagement produced a formal deliverable against industry-standard frameworks.</p>
 
         <div class="timeline">
 
@@ -779,14 +774,14 @@
         </div>
 
         <div class="achievements-grid">
-          <div class="achievement-item achievement-accent">
+          <div class="achievement-item">
             <span class="achievement-icon">🏆</span>
             <div>
               <strong>Research Paper Author</strong>
               <span>Authored a paper on building cyber resilience through offensive and defensive security strategies — published at KES' Shroff College of Arts and Commerce (2024).</span>
             </div>
           </div>
-          <div class="achievement-item achievement-accent">
+          <div class="achievement-item">
             <span class="achievement-icon">🛡️</span>
             <div>
               <strong>CompTIA Security+ (SY0-701)</strong>
@@ -816,80 +811,33 @@
          CONTACT SECTION
     ═══════════════════════════════════════════ -->
     <section id="contact" aria-labelledby="contact-heading">
-      <div class="section-inner contact-section-inner-v2">
+      <div class="section-inner">
         <div class="section-label">07 / Contact</div>
-        <h2 id="contact-heading">Get In Touch</h2>
-        <p class="section-subtext">Reach out for <span class="accent-text">conversation, collaboration, or opportunities</span></p>
+        <h2 id="contact-heading">Let's Connect</h2>
+        
 
-        <div class="contact-list-v2">
-
-          <div class="contact-row-v2">
-            <div class="contact-icon-wrap-v2" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </div>
-            <div class="contact-info-v2">
-              <span class="contact-label-v2">Email</span>
-              <span class="contact-value-v2">sagar.suryawanshi@outlook.in</span>
-            </div>
-            <button class="copy-btn-v2" data-copy="sagar.suryawanshi@outlook.in" aria-label="Copy email address">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              Copy
-            </button>
+        <div class="contact-grid">
+          <a href="mailto:sagar.suryawanshi@outlook.in" class="contact-card" aria-label="Send email to Sagar">
+            <span class="contact-icon">✉️</span>
+            <span class="contact-label">Email</span>
+            <span class="contact-value">sagar.suryawanshi@outlook.in</span>
+          </a>
+          <a href="https://www.linkedin.com/in/sagar--suryawanshi/" class="contact-card" rel="noopener noreferrer" target="_blank" aria-label="View LinkedIn profile">
+            <span class="contact-icon">💼</span>
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">linkedin.com/in/sagar--suryawanshi</span>
+          </a>
+          <a href="https://github.com/CyberSec-Sagar-Security?tab=repositories" class="contact-card" rel="noopener noreferrer" target="_blank" aria-label="View GitHub profile">
+            <span class="contact-icon">🐙</span>
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">github.com/CyberSec-Sagar-Security</span>
+          </a>
+          <div class="contact-card contact-cv">
+            <span class="contact-icon">📄</span>
+            <span class="contact-label">Curriculum Vitae</span>
+            <button id="contact-cv-btn" class="btn btn-primary btn-sm" aria-label="Download CV">Download CV</button>
           </div>
-
-          <div class="contact-row-v2">
-            <div class="contact-icon-wrap-v2" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div class="contact-info-v2">
-              <span class="contact-label-v2">Location</span>
-              <span class="contact-value-v2">Mumbai, India · Open to relocation in Ireland</span>
-            </div>
-          </div>
-
-          <div class="contact-row-v2">
-            <div class="contact-icon-wrap-v2" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            </div>
-            <div class="contact-info-v2">
-              <span class="contact-label-v2">LinkedIn</span>
-              <span class="contact-value-v2">linkedin.com/in/sagar--suryawanshi</span>
-            </div>
-            <button class="copy-btn-v2" data-copy="https://www.linkedin.com/in/sagar--suryawanshi/" aria-label="Copy LinkedIn URL">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              Copy
-            </button>
-          </div>
-
-          <div class="contact-row-v2">
-            <div class="contact-icon-wrap-v2" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            </div>
-            <div class="contact-info-v2">
-              <span class="contact-label-v2">GitHub</span>
-              <span class="contact-value-v2">github.com/CyberSec-Sagar-Security</span>
-            </div>
-          </div>
-
-          <div class="contact-row-v2">
-            <div class="contact-icon-wrap-v2" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <div class="contact-info-v2">
-              <span class="contact-label-v2">Availability</span>
-              <span class="contact-value-v2">Open to opportunities · Ireland &amp; Global · Remote · Hybrid</span>
-            </div>
-          </div>
-
         </div>
-
-        <div class="contact-cta-wrap-v2">
-          <button id="contact-cv-btn" class="btn btn-primary" aria-label="Download CV">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download CV
-          </button>
-        </div>
-
       </div>
     </section>
   </main>
@@ -897,9 +845,8 @@
   <!-- Footer -->
   <footer role="contentinfo">
     <div class="footer-inner">
-      <p class="footer-legal">© 2025 Sagar B. Suryawanshi. All rights reserved.</p>
+      <p class="footer-logo">Sagar B. Suryawanshi</p>
       <p class="footer-tagline">Cybersecurity · Cloud Security · Application Security · DevSecOps</p>
-      <p class="footer-legal">Actively seeking Cybersecurity roles in Ireland · Open to Graduate &amp; Junior positions</p>
     </div>
   </footer>
 
