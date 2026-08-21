@@ -93,46 +93,6 @@
   setActiveLink();
 
   /* ─────────────────────────────────────────────────────────
-     CV DOWNLOAD — Blob URL method; no raw file path exposed
-  ───────────────────────────────────────────────────────── */
-  function triggerCvDownload() {
-    // window.RESUME_B64 is set by resume.js (loaded separately)
-    if (!window.RESUME_B64) {
-      showToast('CV file is loading — please try again in a moment.', 'info');
-      return;
-    }
-    try {
-      const binary = atob(window.RESUME_B64);
-      const bytes = new Uint8Array(binary.length);
-      for (let i = 0; i < binary.length; i++) {
-        bytes[i] = binary.charCodeAt(i);
-      }
-      const blob = new Blob([bytes], { type: 'application/pdf' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'Sagar_Suryawanshi_Cybersecurity_CV.pdf';
-      a.setAttribute('aria-label', 'Downloading CV');
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      // Revoke object URL after short delay to allow download to start
-      setTimeout(function () { URL.revokeObjectURL(url); }, 5000);
-      showToast('CV download started!', 'success');
-    } catch (err) {
-      showToast('Download failed. Please try again.', 'error');
-    }
-  }
-
-  // Attach to all CV download buttons
-  ['hero-cv-btn', 'nav-cv-btn', 'contact-cv-btn'].forEach(function (id) {
-    const btn = document.getElementById(id);
-    if (btn) {
-      btn.addEventListener('click', triggerCvDownload);
-    }
-  });
-
-  /* ─────────────────────────────────────────────────────────
      TOAST NOTIFICATION
   ───────────────────────────────────────────────────────── */
   function showToast(message, type) {

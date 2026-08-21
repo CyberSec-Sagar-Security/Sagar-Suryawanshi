@@ -52,7 +52,7 @@
           <span class="theme-icon theme-icon-moon">🌙</span>
           <span class="theme-icon theme-icon-sun">☀️</span>
         </button></li>
-        <li><button id="nav-cv-btn" class="btn btn-accent btn-sm" aria-label="Download CV">Download CV</button></li>
+        <li><a id="nav-cv-btn" class="btn btn-accent btn-sm" aria-label="Download CV" href="https://github.com/CyberSec-Sagar-Security/Sagar-Suryawanshi/releases/download/resume-asset/811b01c934fcf4518016.pdf" download>Download CV</a></li>
       </ul>
     </div>
   </nav>
@@ -138,16 +138,16 @@
         <div class="about-grid">
           <div class="about-text">
             <p>
-              I got into cybersecurity because I wanted to understand how things break and more importantly, how to build them so they don't.
+              I got into cybersecurity because I wanted to understand how things break, and more importantly, how to build them so they don't.
             </p>
             <p>
-              Over the past two years I've spent evenings and weekends doing exactly that: building a cloud misconfiguration scanner from scratch, designing an AES-256 encrypted file platform, studying how keyloggers behave so I could write detection logic against them. Not because I needed to for a grade because I wanted to understand how it actually works under the hood.
+              Over the past two years that's meant building things I could have just trusted instead: an AWS misconfiguration scanner rather than taking Security Hub's word for it, encryption built from scratch rather than assuming a server handles it properly. More recently it's ToolWarden, an AI-agent firewall that publishes its classifier's real failure rate on attacks it had never seen instead of the one number that would have looked better, and a Wazuh detection lab built specifically to find what the default rules get wrong, not just to run them.
             </p>
             <p>
-              Yes, AWS has Security Hub. Yes, enterprise tools exist for everything I've built. The point was never to replace them. The point was to understand them deeply enough that on day one of a role, I'm not learning what a misconfigured S3 bucket looks like I already know, because I've written code that finds them.
+              Yes, AWS has Security Hub. Yes, enterprise tools exist for everything I've built. The point was never to replace them. It was to understand them well enough that on day one of a role, I'm not learning what a misconfigured S3 bucket looks like. I already know, because I've written the code that finds them.
             </p>
             <p>
-              I'm heading to Ireland for an MSc in Cybersecurity and actively looking for a role where I can keep learning fast and contribute early. Cloud Security, AppSec, DevSecOps, Vulnerability Management, Secure Code Review I want to work across all of it.
+              I'm pursuing an MSc in Cybersecurity in Ireland and actively looking for a role where I can keep learning fast and contribute early. Cloud Security, AppSec, Vulnerability Management, Secure Code Review: I want to work across all of it.
             </p>
             <div class="about-highlights">
               <div class="highlight-item">
@@ -161,7 +161,7 @@
                 <span class="highlight-icon">📍</span>
                 <div>
                   <strong>Location</strong>
-                  <span>Mumbai, India · Open to relocation in Ireland</span>
+                  <span>Mumbai, India → Ireland · Relocating August 2026</span>
                 </div>
               </div>
               <div class="highlight-item">
@@ -185,9 +185,9 @@
               <span>OWASP · Burp Suite · AppSec</span>
             </div>
             <div class="stat-card">
-              <span class="stat-icon">⚙️</span>
-              <strong>DevSecOps</strong>
-              <span>Docker · CI/CD · IaC Security</span>
+              <span class="stat-icon">🎯</span>
+              <strong>Vulnerability Management</strong>
+              <span>CVSS · Risk Prioritization</span>
             </div>
             <div class="stat-card">
               <span class="stat-icon">🛡️</span>
@@ -940,10 +940,10 @@
         </div>
 
         <div class="contact-cta-wrap-v2">
-          <button id="contact-cv-btn" class="btn btn-primary" aria-label="Download CV">
+          <a id="contact-cv-btn" class="btn btn-primary" aria-label="Download CV" href="https://github.com/CyberSec-Sagar-Security/Sagar-Suryawanshi/releases/download/resume-asset/811b01c934fcf4518016.pdf" download>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download CV
-          </button>
+          </a>
         </div>
 
       </div>
@@ -961,7 +961,6 @@
 
   <!-- Scripts — deferred, no inline event handlers -->
   <script src="assets/js/photo.js" defer></script>
-  <script src="assets/js/resume.js" defer></script>
   <script src="assets/js/research-cert.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </body>
