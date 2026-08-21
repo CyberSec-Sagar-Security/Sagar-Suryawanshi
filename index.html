@@ -97,7 +97,7 @@
             </div>
             <div class="trust-divider"></div>
             <div class="trust-item">
-              <span class="trust-number">7</span>
+              <span class="trust-number">9</span>
               <span class="trust-label">Security Projects</span>
             </div>
             <div class="trust-divider"></div>
@@ -657,6 +657,54 @@
                 <span class="tag">Authentication Security</span>
               </div>
               <a href="https://github.com/CyberSec-Sagar-Security/PasswordCrack-Suite" class="project-link" rel="noopener noreferrer" target="_blank" aria-label="View CredentialRisk Auditor on GitHub">
+                View on GitHub →
+              </a>
+            </div>
+          </article>
+
+          <!-- 08 ToolWarden AI -->
+          <article class="project-card" aria-labelledby="proj-toolwarden">
+            <div class="project-number">08</div>
+            <div class="project-content">
+              <div class="project-research-badge">ML · AI Agent Security</div>
+              <h3 id="proj-toolwarden" class="project-title">ToolWarden AI</h3>
+              <p class="project-impact">🛡️ Firewall between AI agents and their tools — stops hijacked instructions from becoming rogue actions</p>
+              <p class="project-desc">AI agents that browse the web or call APIs can be hijacked by instructions hidden inside what they read — a webpage telling the agent to send an email nobody asked for. ToolWarden sits between the agent and every tool call, scores each one with a trained ML ensemble (DeBERTa + LightGBM), and actually blocks, quarantines, or holds risky calls for human approval, not just flags them. Reported honestly: on real novel attacks the model never trained on, it still catches 91% of threats, but roughly 7 in 10 of what it flags is a false positive — published as the real number, not a friendlier blended one.</p>
+              <p class="project-stats">131 tests · 3 integration paths · block / quarantine / hold enforcement</p>
+              <div class="project-tags">
+                <span class="tag">DeBERTa-v3</span>
+                <span class="tag">LightGBM</span>
+                <span class="tag">Prompt Injection</span>
+                <span class="tag">MCP</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">Docker</span>
+                <span class="tag">SHAP</span>
+                <span class="tag">PostgreSQL</span>
+              </div>
+              <a href="https://github.com/CyberSec-Sagar-Security/toolwarden-ai" class="project-link" rel="noopener noreferrer" target="_blank" aria-label="View ToolWarden AI on GitHub">
+                View on GitHub →
+              </a>
+            </div>
+          </article>
+
+          <!-- 09 Wazuh Purple Team Lab -->
+          <article class="project-card" aria-labelledby="proj-wazuhlab">
+            <div class="project-number">09</div>
+            <div class="project-content">
+              <div class="project-research-badge">In Progress · Detection Engineering</div>
+              <h3 id="proj-wazuhlab" class="project-title">Wazuh Purple Team Lab</h3>
+              <p class="project-impact">🧪 Purple team lab testing whether Wazuh's detection rules actually catch real attacks</p>
+              <p class="project-desc">Installing a SIEM isn't the same as having working detection — vendor rulesets ship generic and have to be proven against real attacks first. This lab simulates real MITRE ATT&CK techniques against a monitored Windows endpoint, then checks what Wazuh's default ruleset actually catches. Cycle 1, covering 3 techniques, already found real problems: one generated zero alerts, one falsely flagged normal activity as Critical 18+ times, and one real persistence technique scored as Low severity. Each was fixed with a custom rule and re-tested. Actively expanding next: broader technique coverage, one-command provisioning.</p>
+              <p class="project-stats">Cycle 1 · 3 tactics tested · 3 custom rules written</p>
+              <div class="project-tags">
+                <span class="tag">Wazuh</span>
+                <span class="tag">Sysmon</span>
+                <span class="tag">Atomic Red Team</span>
+                <span class="tag">MITRE ATT&amp;CK</span>
+                <span class="tag">PCRE2</span>
+                <span class="tag">Purple Team</span>
+              </div>
+              <a href="https://github.com/CyberSec-Sagar-Security/Wazuh-Purple-Team-Lab" class="project-link" rel="noopener noreferrer" target="_blank" aria-label="View Wazuh Purple Team Lab on GitHub">
                 View on GitHub →
               </a>
             </div>
