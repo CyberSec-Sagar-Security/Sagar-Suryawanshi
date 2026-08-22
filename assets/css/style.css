@@ -1094,130 +1094,6 @@ html.light .hero-keyword {
   gap: 0.5rem;
 }
 
-/* ── EXPERIENCE / TIMELINE ───────────────────────────────── */
-#experience {
-  background: var(--navy-900);
-}
-
-.timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  position: relative;
-  padding-left: 2.5rem;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 8px;
-  top: 12px;
-  bottom: 12px;
-  width: 2px;
-  background: linear-gradient(to bottom, var(--blue-500), rgba(30, 111, 255, 0.1));
-}
-
-.timeline-item {
-  position: relative;
-  padding-bottom: 2.5rem;
-}
-
-.timeline-item:last-child {
-  padding-bottom: 0;
-}
-
-.timeline-dot {
-  position: absolute;
-  left: -2.5rem;
-  top: 12px;
-  width: 18px;
-  height: 18px;
-  background: var(--navy-900);
-  border: 3px solid var(--blue-500);
-  border-radius: 50%;
-  box-shadow: 0 0 12px var(--blue-glow);
-}
-
-.timeline-card {
-  background: var(--navy-800);
-  border: 1px solid rgba(30, 111, 255, 0.15);
-  border-radius: var(--radius-lg);
-  padding: 1.75rem;
-  transition: border-color var(--transition);
-}
-
-.timeline-card:hover {
-  border-color: rgba(30, 111, 255, 0.35);
-}
-
-.timeline-header {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-  margin-bottom: 1rem;
-}
-
-.timeline-org {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-}
-
-.org-name {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--white);
-}
-
-.org-badge {
-  background: rgba(30, 111, 255, 0.12);
-  border: 1px solid rgba(30, 111, 255, 0.25);
-  color: var(--blue-300);
-  font-size: 0.72rem;
-  font-weight: 600;
-  padding: 0.15rem 0.6rem;
-  border-radius: 100px;
-  font-family: var(--font-mono);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-.timeline-role {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--grey-400);
-}
-
-.timeline-duties {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.timeline-duties li {
-  font-size: 0.9rem;
-  color: var(--grey-300);
-  padding-left: 1rem;
-  position: relative;
-  line-height: 1.65;
-}
-
-.timeline-duties li::before {
-  content: '›';
-  position: absolute;
-  left: 0;
-  color: var(--blue-400);
-  font-weight: 700;
-}
-
-.timeline-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
-
 /* ── RESEARCH SECTION ────────────────────────────────────── */
 #research {
   background: var(--navy-950);
@@ -1590,10 +1466,6 @@ footer {
 
   .contact-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .timeline {
-    padding-left: 2rem;
   }
 }
 
@@ -2356,28 +2228,6 @@ html.light .project-title { color: #1a1a2e; }
 html.light .project-impact { color: #334155; }
 html.light .project-desc { color: #475569; }
 html.light .project-number { color: rgba(0, 102, 204, 0.12); }
-
-/* ── Experience / Timeline ── */
-html.light #experience { background: #f8fafc; }
-html.light .timeline-dot { background: #f8fafc; }
-html.light .timeline-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-}
-html.light .timeline-card:hover {
-  transform: translateY(-2px);
-  border-color: #0066cc;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
-}
-html.light .org-name { color: #1a1a2e; }
-html.light .org-badge {
-  background: rgba(29, 78, 216, 0.07);
-  border-color: rgba(29, 78, 216, 0.15);
-}
-html.light .timeline-role { color: #64748b; }
-html.light .timeline-duties li { color: #334155; }
 
 /* ── Research ── */
 html.light #research { background: #ffffff; }

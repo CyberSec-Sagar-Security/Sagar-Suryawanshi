@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sagar B. Suryawanshi — Cybersecurity | Cloud Security · Application Security · DevSecOps | CompTIA Security+ Certified | AWS, Azure" />
+  <meta name="description" content="Sagar B. Suryawanshi — Cybersecurity | Cloud Security · Application Security | CompTIA Security+ Certified | AWS, Azure" />
   <meta name="robots" content="noindex, nofollow" />
 
   <!-- Security Headers (meta fallback — see security-headers.md for server-level config) -->
@@ -45,7 +45,6 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#certifications">Certifications</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
         <li><a href="#research">Research</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><button id="theme-toggle" aria-label="Switch to dark mode">
@@ -84,7 +83,7 @@
             <a href="https://app.letsdefend.io/certificate/show/b172f6f9-4aa4-4c3f-a2d2-d482345f2731" class="hero-cert-pill" target="_blank" rel="noopener noreferrer">LetsDefend</a>
           </div>
           <p class="hero-tagline">
-            Building security tools across Cloud and AppSec — backed by CompTIA Security+ and AWS Cloud Practitioner certifications, published research, and professional engagements with Mastercard, PwC Switzerland, and Tata Group.
+            Building security tools across Cloud and AppSec, backed by CompTIA Security+ and AWS Cloud Practitioner certifications and published research.
           </p>
           <div class="hero-cta">
             <a href="#projects" class="btn btn-primary">View Projects</a>
@@ -104,11 +103,6 @@
             <div class="trust-item">
               <span class="trust-number">1</span>
               <span class="trust-label">Published Paper</span>
-            </div>
-            <div class="trust-divider"></div>
-            <div class="trust-item">
-              <span class="trust-number">3</span>
-              <span class="trust-label">Professional Engagements</span>
             </div>
           </div>
         </div>
@@ -154,7 +148,7 @@
                 <span class="highlight-icon">🎓</span>
                 <div>
                   <strong>B.Sc. Information Technology</strong>
-                  <span>KES Shroff College, Mumbai · Graduating May 2026</span>
+                  <span>KES' Shroff College of Arts and Commerce, Mumbai · Graduating May 2026</span>
                 </div>
               </div>
               <div class="highlight-item">
@@ -206,7 +200,7 @@
       <div class="section-inner">
         <div class="section-label">02 / Skills</div>
         <h2 id="skills-heading">Technical Expertise</h2>
-        <p class="section-subtext">Hands-on skills across cloud security, application security built through projects, labs, and client engagements.</p>
+        <p class="section-subtext">Hands-on skills across cloud security and application security, built through real projects and independent labs.</p>
 
         <div class="skills-tabs">
           <div class="tab-nav" role="tablist" aria-label="Skill categories">
@@ -304,36 +298,6 @@
                   <span class="skill-pill">Shift-Left Security</span>
                   <span class="skill-pill">Threat Modelling in SDLC</span>
                   <span class="skill-pill">Security Requirements Definition</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="tab-panel" id="tab-devsec" role="tabpanel" aria-labelledby="tabid-devsec" hidden>
-            <div class="skills-pills-grid">
-              <div class="skills-pills-col">
-                <h4 class="pills-group-label">Containers &amp; IaC</h4>
-                <div class="skill-pills">
-                  <span class="skill-pill">Docker Security</span>
-                  <span class="skill-pill">Container Hardening</span>
-                  <span class="skill-pill">Terraform Basics</span>
-                </div>
-              </div>
-              <div class="skills-pills-col">
-                <h4 class="pills-group-label">CI/CD Pipeline</h4>
-                <div class="skill-pills">
-                  <span class="skill-pill">GitHub Actions</span>
-                  <span class="skill-pill">Secrets Management</span>
-                  <span class="skill-pill">Dependency Scanning</span>
-                </div>
-              </div>
-              <div class="skills-pills-col">
-                <h4 class="pills-group-label">Practices</h4>
-                <div class="skill-pills">
-                  <span class="skill-pill">Shift-Left Security</span>
-                  <span class="skill-pill">Security as Code</span>
-                  <span class="skill-pill">Vulnerability Management</span>
-                  <span class="skill-pill">Git Security</span>
                 </div>
               </div>
             </div>
@@ -506,9 +470,34 @@
 
         <div class="projects-grid">
 
-          <!-- 01 PhishSentinel -->
-          <article class="project-card project-featured" aria-labelledby="proj-phishsentinel">
+          <!-- 01 ToolWarden AI -->
+          <article class="project-card" aria-labelledby="proj-toolwarden">
             <div class="project-number">01</div>
+            <div class="project-content">
+              <div class="project-research-badge">ML · AI Agent Security</div>
+              <h3 id="proj-toolwarden" class="project-title">ToolWarden AI</h3>
+              <p class="project-impact">🛡️ Firewall between AI agents and their tools — stops hijacked instructions from becoming rogue actions</p>
+              <p class="project-desc">AI agents that browse the web or call APIs can be hijacked by instructions hidden inside what they read — a webpage telling the agent to send an email nobody asked for. ToolWarden sits between the agent and every tool call, scores each one with a trained ML ensemble (DeBERTa + LightGBM), and actually blocks, quarantines, or holds risky calls for human approval, not just flags them. Reported honestly: on real novel attacks the model never trained on, it still catches 91% of threats, but roughly 7 in 10 of what it flags is a false positive — published as the real number, not a friendlier blended one.</p>
+              <p class="project-stats">131 tests · 3 integration paths · block / quarantine / hold enforcement</p>
+              <div class="project-tags">
+                <span class="tag">DeBERTa-v3</span>
+                <span class="tag">LightGBM</span>
+                <span class="tag">Prompt Injection</span>
+                <span class="tag">MCP</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">Docker</span>
+                <span class="tag">SHAP</span>
+                <span class="tag">PostgreSQL</span>
+              </div>
+              <a href="https://github.com/CyberSec-Sagar-Security/toolwarden-ai" class="project-link" rel="noopener noreferrer" target="_blank" aria-label="View ToolWarden AI on GitHub">
+                View on GitHub →
+              </a>
+            </div>
+          </article>
+
+          <!-- 02 PhishSentinel -->
+          <article class="project-card project-featured" aria-labelledby="proj-phishsentinel">
+            <div class="project-number">02</div>
             <div class="project-content">
               <div class="project-research-badge">ML · Detection Engineering</div>
               <h3 id="proj-phishsentinel" class="project-title">PhishSentinel</h3>
@@ -538,9 +527,9 @@
             </div>
           </article>
 
-          <!-- 02 CloudGuard -->
+          <!-- 03 CloudGuard -->
           <article class="project-card project-featured" aria-labelledby="proj-cloudguard">
-            <div class="project-number">02</div>
+            <div class="project-number">03</div>
             <div class="project-content">
               <h3 id="proj-cloudguard" class="project-title">CloudGuard</h3>
               <p class="project-impact">☁️ AWS cloud misconfiguration detection tool for proactive security auditing</p>
@@ -560,9 +549,32 @@
             </div>
           </article>
 
-          <!-- 03 CryptoVaultX -->
+          <!-- 04 Wazuh Purple Team Lab -->
+          <article class="project-card" aria-labelledby="proj-wazuhlab">
+            <div class="project-number">04</div>
+            <div class="project-content">
+              <div class="project-research-badge">In Progress · Detection Engineering</div>
+              <h3 id="proj-wazuhlab" class="project-title">Wazuh Purple Team Lab</h3>
+              <p class="project-impact">🧪 Purple team lab testing whether Wazuh's detection rules actually catch real attacks</p>
+              <p class="project-desc">Installing a SIEM isn't the same as having working detection — vendor rulesets ship generic and have to be proven against real attacks first. This lab simulates real MITRE ATT&CK techniques against a monitored Windows endpoint, then checks what Wazuh's default ruleset actually catches. Cycle 1, covering 3 techniques, already found real problems: one generated zero alerts, one falsely flagged normal activity as Critical 18+ times, and one real persistence technique scored as Low severity. Each was fixed with a custom rule and re-tested. Actively expanding next: broader technique coverage, one-command provisioning.</p>
+              <p class="project-stats">Cycle 1 · 3 tactics tested · 3 custom rules written</p>
+              <div class="project-tags">
+                <span class="tag">Wazuh</span>
+                <span class="tag">Sysmon</span>
+                <span class="tag">Atomic Red Team</span>
+                <span class="tag">MITRE ATT&amp;CK</span>
+                <span class="tag">PCRE2</span>
+                <span class="tag">Purple Team</span>
+              </div>
+              <a href="https://github.com/CyberSec-Sagar-Security/Wazuh-Purple-Team-Lab" class="project-link" rel="noopener noreferrer" target="_blank" aria-label="View Wazuh Purple Team Lab on GitHub">
+                View on GitHub →
+              </a>
+            </div>
+          </article>
+
+          <!-- 05 CryptoVaultX -->
           <article class="project-card" aria-labelledby="proj-cryptovaultx">
-            <div class="project-number">03</div>
+            <div class="project-number">05</div>
             <div class="project-content">
               <h3 id="proj-cryptovaultx" class="project-title">CryptoVaultX</h3>
               <p class="project-impact">🔐 End-to-end encrypted file storage platform with client-side cryptography and role-based access control</p>
@@ -582,9 +594,9 @@
             </div>
           </article>
 
-          <!-- 04 NetTrace -->
+          <!-- 06 NetTrace -->
           <article class="project-card" aria-labelledby="proj-nettrace">
-            <div class="project-number">04</div>
+            <div class="project-number">06</div>
             <div class="project-content">
               <h3 id="proj-nettrace" class="project-title">NetTrace</h3>
               <p class="project-impact">🌐 Network reconnaissance and attack surface mapping tool built on Nmap automation</p>
@@ -597,47 +609,6 @@
                 <span class="tag">Port Scanning</span>
               </div>
               <a href="https://github.com/CyberSec-Sagar-Security/NETTRACE" class="project-link" rel="noopener noreferrer" target="_blank" aria-label="View NetTrace on GitHub">
-                View on GitHub →
-              </a>
-            </div>
-          </article>
-
-          <!-- 05 Keylogger -->
-          <article class="project-card" aria-labelledby="proj-keylogger">
-            <div class="project-number">05</div>
-            <div class="project-content">
-              <div class="project-research-badge">Research Series: Adversary Simulation → Detection &nbsp;|&nbsp; Part 1 of 2</div>
-              <h3 id="proj-keylogger" class="project-title">KeyStroke Monitor</h3>
-              <p class="project-impact">🧪 OS-level keystroke capture tool for adversary simulation and detection research</p>
-              <p class="project-desc">Part 1 of a two-part security research project. To build an effective defence, you first need to understand the attack in detail. KeyStroke Monitor is a low-level OS keystroke capture tool built specifically to study the precise behavioural patterns of a real keylogger — API call sequences, timing signatures, and process injection methods.</p>
-              <div class="project-tags">
-                <span class="tag">Python</span>
-                <span class="tag">OS APIs</span>
-                <span class="tag">Malware Simulation</span>
-                <span class="tag">Endpoint Security</span>
-              </div>
-              <a href="https://github.com/CyberSec-Sagar-Security/KeyStroke-Monitor" class="project-link" rel="noopener noreferrer" target="_blank" aria-label="View KeyStroke Monitor on GitHub">
-                View on GitHub →
-              </a>
-            </div>
-          </article>
-
-          <!-- 06 Anti-Keylogger -->
-          <article class="project-card" aria-labelledby="proj-antikeylogger">
-            <div class="project-number">06</div>
-            <div class="project-content">
-              <div class="project-research-badge">Research Series: Adversary Simulation → Detection &nbsp;|&nbsp; Part 2 of 2</div>
-              <h3 id="proj-antikeylogger" class="project-title">Anti-Keylogger</h3>
-              <p class="project-impact">🛡️ Behavior-based detection and mitigation tool for keystroke logging threats</p>
-              <p class="project-desc">Part 2 of the research series. Using the behavioural patterns mapped in Part 1, Anti-Keylogger detects and terminates unauthorised keystroke capture processes in real time — implementing process monitoring and behavioural detection logic that mirrors basic EDR functionality. Attack, understand, defend.</p>
-              <div class="project-tags">
-                <span class="tag">Python</span>
-                <span class="tag">Process Monitoring</span>
-                <span class="tag">EDR Concepts</span>
-                <span class="tag">Behavioral Detection</span>
-                <span class="tag">Defensive Security</span>
-              </div>
-              <a href="https://github.com/CyberSec-Sagar-Security/Anti-Keylogger" class="project-link" rel="noopener noreferrer" target="_blank" aria-label="View Anti-Keylogger on GitHub">
                 View on GitHub →
               </a>
             </div>
@@ -662,139 +633,46 @@
             </div>
           </article>
 
-          <!-- 08 ToolWarden AI -->
-          <article class="project-card" aria-labelledby="proj-toolwarden">
+          <!-- 08 Keylogger -->
+          <article class="project-card" aria-labelledby="proj-keylogger">
             <div class="project-number">08</div>
             <div class="project-content">
-              <div class="project-research-badge">ML · AI Agent Security</div>
-              <h3 id="proj-toolwarden" class="project-title">ToolWarden AI</h3>
-              <p class="project-impact">🛡️ Firewall between AI agents and their tools — stops hijacked instructions from becoming rogue actions</p>
-              <p class="project-desc">AI agents that browse the web or call APIs can be hijacked by instructions hidden inside what they read — a webpage telling the agent to send an email nobody asked for. ToolWarden sits between the agent and every tool call, scores each one with a trained ML ensemble (DeBERTa + LightGBM), and actually blocks, quarantines, or holds risky calls for human approval, not just flags them. Reported honestly: on real novel attacks the model never trained on, it still catches 91% of threats, but roughly 7 in 10 of what it flags is a false positive — published as the real number, not a friendlier blended one.</p>
-              <p class="project-stats">131 tests · 3 integration paths · block / quarantine / hold enforcement</p>
+              <div class="project-research-badge">Research Series: Adversary Simulation → Detection &nbsp;|&nbsp; Part 1 of 2</div>
+              <h3 id="proj-keylogger" class="project-title">KeyStroke Monitor</h3>
+              <p class="project-impact">🧪 OS-level keystroke capture tool for adversary simulation and detection research</p>
+              <p class="project-desc">Part 1 of a two-part security research project. To build an effective defence, you first need to understand the attack in detail. KeyStroke Monitor is a low-level OS keystroke capture tool built specifically to study the precise behavioural patterns of a real keylogger — API call sequences, timing signatures, and process injection methods.</p>
               <div class="project-tags">
-                <span class="tag">DeBERTa-v3</span>
-                <span class="tag">LightGBM</span>
-                <span class="tag">Prompt Injection</span>
-                <span class="tag">MCP</span>
-                <span class="tag">FastAPI</span>
-                <span class="tag">Docker</span>
-                <span class="tag">SHAP</span>
-                <span class="tag">PostgreSQL</span>
+                <span class="tag">Python</span>
+                <span class="tag">OS APIs</span>
+                <span class="tag">Malware Simulation</span>
+                <span class="tag">Endpoint Security</span>
               </div>
-              <a href="https://github.com/CyberSec-Sagar-Security/toolwarden-ai" class="project-link" rel="noopener noreferrer" target="_blank" aria-label="View ToolWarden AI on GitHub">
+              <a href="https://github.com/CyberSec-Sagar-Security/KeyStroke-Monitor" class="project-link" rel="noopener noreferrer" target="_blank" aria-label="View KeyStroke Monitor on GitHub">
                 View on GitHub →
               </a>
             </div>
           </article>
 
-          <!-- 09 Wazuh Purple Team Lab -->
-          <article class="project-card" aria-labelledby="proj-wazuhlab">
+          <!-- 09 Anti-Keylogger -->
+          <article class="project-card" aria-labelledby="proj-antikeylogger">
             <div class="project-number">09</div>
             <div class="project-content">
-              <div class="project-research-badge">In Progress · Detection Engineering</div>
-              <h3 id="proj-wazuhlab" class="project-title">Wazuh Purple Team Lab</h3>
-              <p class="project-impact">🧪 Purple team lab testing whether Wazuh's detection rules actually catch real attacks</p>
-              <p class="project-desc">Installing a SIEM isn't the same as having working detection — vendor rulesets ship generic and have to be proven against real attacks first. This lab simulates real MITRE ATT&CK techniques against a monitored Windows endpoint, then checks what Wazuh's default ruleset actually catches. Cycle 1, covering 3 techniques, already found real problems: one generated zero alerts, one falsely flagged normal activity as Critical 18+ times, and one real persistence technique scored as Low severity. Each was fixed with a custom rule and re-tested. Actively expanding next: broader technique coverage, one-command provisioning.</p>
-              <p class="project-stats">Cycle 1 · 3 tactics tested · 3 custom rules written</p>
+              <div class="project-research-badge">Research Series: Adversary Simulation → Detection &nbsp;|&nbsp; Part 2 of 2</div>
+              <h3 id="proj-antikeylogger" class="project-title">Anti-Keylogger</h3>
+              <p class="project-impact">🛡️ Behavior-based detection and mitigation tool for keystroke logging threats</p>
+              <p class="project-desc">Part 2 of the research series. Using the behavioural patterns mapped in Part 1, Anti-Keylogger detects and terminates unauthorised keystroke capture processes in real time — implementing process monitoring and behavioural detection logic that mirrors basic EDR functionality. Attack, understand, defend.</p>
               <div class="project-tags">
-                <span class="tag">Wazuh</span>
-                <span class="tag">Sysmon</span>
-                <span class="tag">Atomic Red Team</span>
-                <span class="tag">MITRE ATT&amp;CK</span>
-                <span class="tag">PCRE2</span>
-                <span class="tag">Purple Team</span>
+                <span class="tag">Python</span>
+                <span class="tag">Process Monitoring</span>
+                <span class="tag">EDR Concepts</span>
+                <span class="tag">Behavioral Detection</span>
+                <span class="tag">Defensive Security</span>
               </div>
-              <a href="https://github.com/CyberSec-Sagar-Security/Wazuh-Purple-Team-Lab" class="project-link" rel="noopener noreferrer" target="_blank" aria-label="View Wazuh Purple Team Lab on GitHub">
+              <a href="https://github.com/CyberSec-Sagar-Security/Anti-Keylogger" class="project-link" rel="noopener noreferrer" target="_blank" aria-label="View Anti-Keylogger on GitHub">
                 View on GitHub →
               </a>
             </div>
           </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════
-         EXPERIENCE SECTION
-    ═══════════════════════════════════════════ -->
-    <section id="experience" aria-labelledby="exp-heading">
-      <div class="section-inner">
-        <div class="section-label">05 / Experience</div>
-        <h2 id="exp-heading">Simulated Industry Experience</h2>
-        <p class="section-subtext">Structured virtual programmes modelling real enterprise security analyst tasks — each engagement produced a formal deliverable against industry-standard frameworks.</p>
-
-        <div class="timeline">
-
-          <div class="timeline-item" role="article" aria-labelledby="exp-mastercard">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card">
-              <div class="timeline-header">
-                <div class="timeline-org">
-                  <span class="org-name" id="exp-mastercard">Mastercard</span>
-                  <span class="org-badge">Forage Placement</span>
-                </div>
-                <span class="timeline-role">Cybersecurity Analyst</span>
-              </div>
-              <ul class="timeline-duties" role="list">
-                <li>Analysed real-pattern phishing emails targeting financial services employees — identified 8 distinct social engineering techniques and mapped each to MITRE ATT&amp;CK T1566 (Phishing).</li>
-                <li>Assessed organisational security awareness gaps using a simulated employee dataset, producing a targeted training intervention plan aligned to the identified risk profile.</li>
-                <li>Delivered a formal threat intelligence report structured to Tier-1 SOC analyst format — findings, severity ratings, and executive summary included.</li>
-              </ul>
-              <div class="timeline-tags">
-                <span class="tag">Phishing Analysis</span>
-                <span class="tag">Threat Intel</span>
-                <span class="tag">Security Awareness</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="timeline-item" role="article" aria-labelledby="exp-pwc">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card">
-              <div class="timeline-header">
-                <div class="timeline-org">
-                  <span class="org-name" id="exp-pwc">PwC Switzerland</span>
-                  <span class="org-badge">Forage Placement</span>
-                </div>
-                <span class="timeline-role">Cybersecurity Consultant</span>
-              </div>
-              <ul class="timeline-duties" role="list">
-                <li>Performed an integrated security risk assessment for a simulated enterprise client — identified critical and high-severity findings and mapped each to ISO 27001 controls and NIST CSF functions.</li>
-                <li>Designed a network segmentation strategy to address identified lateral movement risks — produced a firewall rule recommendation set with business justification for each proposed change.</li>
-                <li>Structured risk findings in a PwC-format client advisory report, prioritised by business impact rather than raw CVSS score alone.</li>
-              </ul>
-              <div class="timeline-tags">
-                <span class="tag">Risk Assessment</span>
-                <span class="tag">ISO 27001</span>
-                <span class="tag">NIST CSF</span>
-                <span class="tag">Network Security</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="timeline-item" role="article" aria-labelledby="exp-tata">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card">
-              <div class="timeline-header">
-                <div class="timeline-org">
-                  <span class="org-name" id="exp-tata">Tata Group</span>
-                  <span class="org-badge">Forage Placement</span>
-                </div>
-                <span class="timeline-role">IAM Security Analyst</span>
-              </div>
-              <ul class="timeline-duties" role="list">
-                <li>Designed an enterprise IAM architecture for a large-scale scenario — applied least-privilege principles across 200+ simulated user roles and produced a full access matrix covering all critical system tiers.</li>
-                <li>Developed an MFA strategy for privileged accounts, selecting authentication methods by risk tier: hardware tokens for admin access, TOTP for standard privileged users.</li>
-                <li>Documented architecture decisions as a structured security advisory aligned to Tata's governance reporting standards — written for a non-technical executive audience.</li>
-              </ul>
-              <div class="timeline-tags">
-                <span class="tag">IAM</span>
-                <span class="tag">MFA</span>
-                <span class="tag">Least Privilege</span>
-                <span class="tag">Governance</span>
-              </div>
-            </div>
-          </div>
 
         </div>
       </div>
@@ -805,7 +683,7 @@
     ═══════════════════════════════════════════ -->
     <section id="research" aria-labelledby="research-heading">
       <div class="section-inner">
-        <div class="section-label">06 / Research &amp; Achievements</div>
+        <div class="section-label">05 / Research &amp; Achievements</div>
         <h2 id="research-heading">Research &amp; Publications</h2>
 
         <div class="research-card" role="article">
@@ -839,7 +717,7 @@
             <span class="achievement-icon">🏆</span>
             <div>
               <strong>Research Paper Author</strong>
-              <span>Authored a paper on building cyber resilience through offensive and defensive security strategies — published at KES' Shroff College of Arts and Commerce (2024).</span>
+              <span>Authored a paper on building cyber resilience through offensive and defensive security strategies — published at an international conference (2024) while at KES' Shroff College of Arts and Commerce.</span>
             </div>
           </div>
           <div class="achievement-item achievement-accent">
@@ -856,11 +734,11 @@
               <span>Independently designed, built, and operated a multi-VM SOC environment for continuous skills development.</span>
             </div>
           </div>
-          <div class="achievement-item">
-            <span class="achievement-icon">🌐</span>
+          <div class="achievement-item achievement-accent">
+            <span class="achievement-icon">☁️</span>
             <div>
-              <strong>3 Global Firm Placements</strong>
-              <span>Completed professional security placements with Mastercard, PwC Switzerland, and Tata Group.</span>
+              <strong>AWS Cloud Practitioner</strong>
+              <span>Earned AWS's foundational cloud certification, validating concepts applied directly in CloudGuard.</span>
             </div>
           </div>
         </div>
@@ -873,7 +751,7 @@
     ═══════════════════════════════════════════ -->
     <section id="contact" aria-labelledby="contact-heading">
       <div class="section-inner contact-section-inner-v2">
-        <div class="section-label">07 / Contact</div>
+        <div class="section-label">06 / Contact</div>
         <h2 id="contact-heading">Get In Touch</h2>
         <p class="section-subtext">Reach out for <span class="accent-text">conversation, collaboration, or opportunities</span></p>
 
@@ -899,7 +777,7 @@
             </div>
             <div class="contact-info-v2">
               <span class="contact-label-v2">Location</span>
-              <span class="contact-value-v2">Mumbai, India · Open to relocation in Ireland</span>
+              <span class="contact-value-v2">Mumbai, India → Ireland · Relocating August 2026</span>
             </div>
           </div>
 
@@ -953,8 +831,8 @@
   <!-- Footer -->
   <footer role="contentinfo">
     <div class="footer-inner">
-      <p class="footer-legal">© 2025 Sagar B. Suryawanshi. All rights reserved.</p>
-      <p class="footer-tagline">Cybersecurity · Cloud Security · Application Security · DevSecOps</p>
+      <p class="footer-legal">© <span id="footer-year">2026</span> Sagar B. Suryawanshi. All rights reserved.</p>
+      <p class="footer-tagline">Cybersecurity · Cloud Security · Application Security</p>
       <p class="footer-legal">Actively seeking Cybersecurity roles in Ireland · Open to Graduate &amp; Junior positions</p>
     </div>
   </footer>
