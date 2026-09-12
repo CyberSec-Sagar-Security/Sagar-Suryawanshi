@@ -1778,6 +1778,20 @@ html.light .copy-btn-v2:hover {
   margin-right: auto;
 }
 
+.certs-group-heading {
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--blue-400);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-family: var(--font-mono);
+  margin: 2.25rem 0 1rem;
+}
+.certs-grid-v2 + .certs-group-heading {
+  margin-top: 2.75rem;
+}
+
 .certs-grid-v2 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1922,6 +1936,7 @@ html.light .cert-name-v2    { color: #1a1a2e; }
 html.light .cert-issuer-v2  { color: #0066cc; }
 html.light .cert-fullname-v2{ color: #64748b; }
 html.light .cert-date-v2    { color: #94a3b8; }
+html.light .certs-group-heading { color: #0066cc; }
 html.light .cert-verify-btn-v2 { color: #0066cc; }
 html.light .cert-verify-btn-v2:hover { color: #0052a3; }
 
