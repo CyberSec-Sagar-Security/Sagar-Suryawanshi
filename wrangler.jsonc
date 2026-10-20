@@ -1,6 +1,6 @@
 {
   // Cloudflare Workers static-assets config. No build step: the repo root is the site.
-  "name": "sagar-suryawanshi",
+  "name": "sagarsuryawanshi",
   "compatibility_date": "2026-09-01",
   "assets": {
     "directory": "."
