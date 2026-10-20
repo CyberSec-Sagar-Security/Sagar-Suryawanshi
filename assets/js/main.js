@@ -178,6 +178,27 @@
     if (!tabNav) return;
 
     const buttons = tabNav.querySelectorAll('.tab-btn');
+    const tabList = Array.prototype.slice.call(buttons);
+
+    // Roving tabindex: only the selected tab sits in the Tab order
+    tabList.forEach(function (b) {
+      b.setAttribute('tabindex', b.classList.contains('active') ? '0' : '-1');
+    });
+
+    // Arrow / Home / End keys move between tabs (WAI-ARIA tabs pattern)
+    tabNav.addEventListener('keydown', function (e) {
+      const current = tabList.indexOf(document.activeElement);
+      if (current === -1) return;
+      let next = null;
+      if (e.key === 'ArrowRight') next = (current + 1) % tabList.length;
+      else if (e.key === 'ArrowLeft') next = (current - 1 + tabList.length) % tabList.length;
+      else if (e.key === 'Home') next = 0;
+      else if (e.key === 'End') next = tabList.length - 1;
+      if (next === null) return;
+      e.preventDefault();
+      tabList[next].focus();
+      tabList[next].click();
+    });
 
     buttons.forEach(function (btn) {
       btn.addEventListener('click', function () {
@@ -185,6 +206,7 @@
         buttons.forEach(function (b) {
           b.classList.remove('active');
           b.setAttribute('aria-selected', 'false');
+          b.setAttribute('tabindex', '-1');
         });
         document.querySelectorAll('.tab-panel').forEach(function (p) {
           p.classList.remove('active');
@@ -194,6 +216,7 @@
         // Activate clicked
         btn.classList.add('active');
         btn.setAttribute('aria-selected', 'true');
+        btn.setAttribute('tabindex', '0');
         const target = document.getElementById(btn.getAttribute('aria-controls'));
         if (target) {
           target.classList.add('active');
@@ -204,6 +227,46 @@
   }
 
   initSkillsTabs();
+
+  /* ─────────────────────────────────────────────────────────
+     CV DOWNLOAD — Blob URL method; no raw file path exposed
+  ───────────────────────────────────────────────────────── */
+  function triggerCvDownload() {
+    // window.RESUME_B64 is set by resume.js (loaded separately)
+    if (!window.RESUME_B64) {
+      showToast('CV file is loading — please try again in a moment.', 'info');
+      return;
+    }
+    try {
+      const binary = atob(window.RESUME_B64);
+      const bytes = new Uint8Array(binary.length);
+      for (let i = 0; i < binary.length; i++) {
+        bytes[i] = binary.charCodeAt(i);
+      }
+      const blob = new Blob([bytes], { type: 'application/pdf' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'Sagar_Suryawanshi_Cybersecurity_Resume.pdf';
+      a.setAttribute('aria-label', 'Downloading CV');
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      // Revoke object URL after short delay to allow download to start
+      setTimeout(function () { URL.revokeObjectURL(url); }, 5000);
+      showToast('CV download started!', 'success');
+    } catch (err) {
+      showToast('Download failed. Please try again.', 'error');
+    }
+  }
+
+  // Attach to all CV download buttons
+  ['hero-cv-btn', 'nav-cv-btn', 'contact-cv-btn'].forEach(function (id) {
+    const btn = document.getElementById(id);
+    if (btn) {
+      btn.addEventListener('click', triggerCvDownload);
+    }
+  });
 
   /* ─────────────────────────────────────────────────────────
      PHOTO — right-click protection (defensive UX only)
@@ -228,15 +291,27 @@
     const el = document.querySelector('.hero-title');
     if (!el) return;
 
+    // Respect the visitor's reduced-motion setting: leave the title as-is
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
     const text = el.textContent.trim();
     el.textContent = '';
     el.style.opacity = '1';
+
+    // Screen readers get the full title at once; the typed copy is visual only
+    const srText = document.createElement('span');
+    srText.className = 'sr-only';
+    srText.textContent = text;
+    const typed = document.createElement('span');
+    typed.setAttribute('aria-hidden', 'true');
+    el.appendChild(srText);
+    el.appendChild(typed);
 
     let i = 0;
     const interval = setInterval(function () {
       if (i < text.length) {
         // Use createTextNode to avoid any injection risk
-        el.appendChild(document.createTextNode(text[i]));
+        typed.appendChild(document.createTextNode(text[i]));
         i++;
       } else {
         clearInterval(interval);
@@ -272,7 +347,7 @@
       html.classList.toggle('light', !goingDark);
       html.classList.toggle('dark', goingDark);
       // Save preference
-      localStorage.setItem('portfolio-theme', goingDark ? 'dark' : 'light');
+      try { localStorage.setItem('portfolio-theme', goingDark ? 'dark' : 'light'); } catch (e) {}
       updateToggleLabel();
       // Remove transition class after animation completes
       setTimeout(function () {
