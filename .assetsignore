@@ -4,5 +4,4 @@
 .gitignore
 .assetsignore
 wrangler.jsonc
-CNAME
 .wrangler
