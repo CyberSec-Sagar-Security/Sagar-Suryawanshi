@@ -1,0 +1,8 @@
+# Files that must never be served publicly by Cloudflare
+.git
+.github
+.gitignore
+.assetsignore
+wrangler.jsonc
+CNAME
+.wrangler
